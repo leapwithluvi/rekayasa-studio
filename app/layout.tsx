@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
 import JsonLd from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -91,6 +93,8 @@ export default function RootLayout({
       </head>
       <body className={`${syne.variable} ${dmSans.variable} font-sans min-h-full flex flex-col bg-background text-foreground bg-gradient-premium`}>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
