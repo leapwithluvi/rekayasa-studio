@@ -55,7 +55,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link 
-            href="https://wa.me/yournumber"
+            href="https://wa.me/6283152248722"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-charcoal text-off-white px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-amber-warm hover:text-charcoal transition-all duration-300 rounded-sm shadow-xl shadow-charcoal/5"

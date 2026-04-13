@@ -30,7 +30,7 @@ export default function CTASection() {
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <Link 
-              href="https://wa.me/yournumber"
+              href="https://wa.me/6283152248722"
               target="_blank"
               rel="noopener noreferrer"
               className="group w-full md:w-auto bg-amber-warm text-charcoal px-12 py-6 text-sm font-black uppercase tracking-[0.2em] rounded-sm hover:bg-off-white transition-all duration-500 shadow-2xl flex items-center justify-center gap-4"

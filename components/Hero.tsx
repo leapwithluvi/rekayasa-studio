@@ -37,7 +37,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
           <Link 
-            href="https://wa.me/yournumber"
+            href="https://wa.me/6283152248722"
             target="_blank"
             rel="noopener noreferrer"
             className="group w-full sm:w-auto bg-charcoal text-off-white px-12 py-5 text-sm font-black uppercase tracking-[0.2em] rounded-sm hover:bg-amber-warm hover:text-charcoal transition-all duration-500 shadow-2xl flex items-center justify-center gap-3"

@@ -114,7 +114,7 @@ export default function Pricing() {
               </ul>
 
               <Link 
-                href="https://wa.me/yournumber"
+                href="https://wa.me/6283152248722"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(

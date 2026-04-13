@@ -57,7 +57,7 @@ export default function Footer() {
                   <Link href="#" className="text-charcoal/30 hover:text-amber-warm transition-colors"><Globe size={20} /></Link>
                   <Link href="#" className="text-charcoal/30 hover:text-amber-warm transition-colors"><Mail size={20} /></Link>
                   <Link href="#" className="text-charcoal/30 hover:text-amber-warm transition-colors"><MessageSquare size={20} /></Link>
-                  <Link href="https://wa.me/yournumber" target="_blank" rel="noopener noreferrer" className="text-charcoal/30 hover:text-amber-warm transition-colors"><MessageCircle size={20} /></Link>
+                  <Link href="https://wa.me/6283152248722" target="_blank" rel="noopener noreferrer" className="text-charcoal/30 hover:text-amber-warm transition-colors"><MessageCircle size={20} /></Link>
                 </div>
               </li>
             </ul>
