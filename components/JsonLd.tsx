@@ -42,7 +42,7 @@ export default function JsonLd() {
       "@type": "Person",
       "name": "Luvi Aprilyansyah Gabriel"
     },
-    "description": "Jasa pembuatan website profesional, cepat, dan terjangkau di Kalimantan Timur. Spesialis landing page, portofolio UMKM, dan website bisnis kelas dunia.",
+    "description": "Solusi Jasa Pembuatan Website Profesional di Tenggarong & Kaltim. Spesialis Landing Page, UMKM, dan Website Bisnis dengan hasil premium & pengerjaan kilat.",
     "areaServed": [
       "Tenggarong",
       "Samarinda",

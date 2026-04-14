@@ -63,8 +63,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Rekayasa Studio — Jasa Pembuatan Website Profesional di Kalimantan Timur",
-    description: "Desain Elevasi Bisnis Anda. Jasa website UMKM, portfolio, dan landing page di Tenggarong & sekitarnya.",
+    title: "Jasa Pembuatan Website Tenggarong & Kaltim | Rekayasa Studio",
+    description: "Solusi Jasa Pembuatan Website Profesional di Tenggarong & Kaltim. Spesialis Landing Page, UMKM, dan Website Bisnis dengan hasil premium & pengerjaan kilat.",
     url: "https://rekayasastudio.my.id",
     siteName: "Rekayasa Studio",
     images: [
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Rekayasa Studio — Desain Elevasi Bisnis Anda",
+        alt: "Rekayasa Studio — Jasa Pembuatan Website Profesional",
       },
     ],
     locale: "id_ID",
@@ -80,14 +80,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rekayasa Studio — Jasa Pembuatan Website Profesional di Kalimantan Timur",
-    description: "Jasa pembuatan website UMKM, portfolio, dan landing page profesional di Kalimantan Timur.",
+    title: "Jasa Pembuatan Website Tenggarong & Kaltim | Rekayasa Studio",
+    description: "Solusi Jasa Pembuatan Website Profesional di Tenggarong & Kaltim. Spesialis Landing Page, UMKM, dan Website Bisnis dengan hasil premium & pengerjaan kilat.",
     images: ["/opengraph-image"],
   },
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.png" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+    ],
     shortcut: "/favicon.png",
     apple: "/favicon.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon.png",
+      },
+    ],
   },
 };
 
