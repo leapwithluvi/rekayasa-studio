@@ -79,6 +79,11 @@ export const metadata: Metadata = {
     description: "Jasa pembuatan website UMKM, portfolio, dan landing page profesional di Kalimantan Timur.",
     images: ["/opengraph-image"],
   },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -90,6 +95,21 @@ export default function RootLayout({
     <html lang="id" className="scroll-smooth">
       <head>
         <JsonLd />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined') {
+                if ('scrollRestoration' in history) {
+                  history.scrollRestoration = 'manual';
+                }
+                window.scrollTo(0, 0);
+                if (window.location.hash) {
+                  window.history.replaceState({}, document.title, window.location.pathname);
+                }
+              }
+            `,
+          }}
+        />
       </head>
       <body className={`${syne.variable} ${dmSans.variable} font-sans min-h-full flex flex-col bg-background text-foreground bg-gradient-premium`}>
         {children}

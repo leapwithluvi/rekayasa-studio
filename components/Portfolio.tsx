@@ -1,7 +1,11 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   { title: "Lumina Scent", category: "UMKM - E-Commerce", img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=800" },
@@ -13,25 +17,61 @@ const projects = [
 ];
 
 export default function Portfolio() {
+  const container = useRef(null);
+
+  useGSAP(() => {
+    // Memastikan koordinat benar
+    ScrollTrigger.refresh();
+
+    // Portfolio Header
+    gsap.fromTo(".portfolio-header", 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top bottom-=100",
+          toggleActions: "play none none none",
+        }
+      }
+    );
+
+    // Portfolio Items
+    gsap.fromTo(".portfolio-item", 
+      { opacity: 0, y: 50, scale: 0.9 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        scale: 1,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".portfolio-grid",
+          start: "top bottom-=50",
+          toggleActions: "play none none none",
+        }
+      }
+    );
+  }, { scope: container });
+
   return (
-    <section id="portfolio" className="py-32 px-6 bg-off-white">
+    <section id="portfolio" ref={container} className="py-32 px-6 bg-off-white scroll-mt-14">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 md:24">
+        <div className="portfolio-header text-center mb-16 md:24">
           <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/40 mb-6 md:8">Karya Kami</h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-charcoal text-balance">
             Terpilih & <span className="text-amber-warm italic">Terukur.</span>
           </h3>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="portfolio-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {projects.map((project, i) => (
-            <motion.div 
+            <div 
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group cursor-pointer"
+              className="portfolio-item group cursor-pointer"
             >
               <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-sm mb-4 md:6">
                 <img 
@@ -49,7 +89,7 @@ export default function Portfolio() {
                   {project.title}
                 </h4>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

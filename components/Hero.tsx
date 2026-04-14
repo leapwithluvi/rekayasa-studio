@@ -1,41 +1,55 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
+  const container = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+    tl.from(".hero-title", {
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      delay: 0.2,
+    })
+    .from(".hero-description", {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+    }, "-=0.8")
+    .from(".hero-cta", {
+      y: 20,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+    }, "-=0.6")
+    .from(".hero-social", {
+      opacity: 0,
+      duration: 1.5,
+    }, "-=0.4");
+  }, { scope: container });
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-24 md:pb-24 lg:pb-24 px-6 overflow-hidden">
+    <section id="home" ref={container} className="relative min-h-screen flex items-center justify-center pt-24 pb-24 md:pb-24 lg:pb-24 px-6 overflow-hidden">
       {/* Background Grid */}
       <div className="absolute inset-0 grid-pattern opacity-40 pointer-events-none" />
       
       <div className="max-w-6xl mx-auto text-center relative z-10">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold leading-[1] tracking-tighter text-charcoal mb-10 text-balance"
-        >
+        <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold leading-[1] tracking-tighter text-charcoal mb-10 text-balance">
           Desain <span className="italic text-amber-warm underline underline-offset-8 decoration-1 decoration-amber-warm/30">Elevasi</span> <br className="hidden sm:block" /> Bisnis Anda.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-2xl mx-auto text-lg md:text-xl text-charcoal/60 leading-relaxed font-medium mb-12 text-balance"
-        >
+        <p className="hero-description max-w-2xl mx-auto text-lg md:text-xl text-charcoal/60 leading-relaxed font-medium mb-12 text-balance">
           Kami membantu UMKM dan profesional membangun kehadiran digital kelas dunia melalui website yang elegan, kencang, dan siap mengonversi pengunjung menjadi klien.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
-        >
+        <div className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link 
             href="https://wa.me/6283152248722"
             target="_blank"
@@ -51,15 +65,10 @@ export default function Hero() {
           >
             Lihat Portofolio
           </Link>
-        </motion.div>
+        </div>
 
         {/* Social Proof Text */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="mt-20 pt-16 border-t border-charcoal/5 flex flex-col items-center gap-6"
-        >
+        <div className="hero-social mt-20 pt-16 border-t border-charcoal/5 flex flex-col items-center gap-6">
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-charcoal/40">Teknologi yang Kami Gunakan</span>
           <div className="flex flex-wrap md:flex-nowrap justify-center gap-x-6 md:gap-x-10 lg:gap-x-12 gap-y-4 opacity-30 grayscale contrast-125 items-center">
             <span className="font-serif font-black text-lg md:text-xl lg:text-2xl tracking-tighter">NEXT.JS</span>
@@ -70,7 +79,7 @@ export default function Hero() {
             <div className="w-1 h-1 bg-charcoal rounded-full hidden md:block" />
             <span className="font-serif font-black text-lg md:text-xl lg:text-2xl tracking-tighter">VERCEL</span>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
