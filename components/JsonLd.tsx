@@ -42,7 +42,17 @@ export default function JsonLd() {
       "@type": "Person",
       "name": "Luvi Aprilyansyah Gabriel"
     },
-    "areaServed": "Indonesia",
+    "description": "Jasa pembuatan website profesional, cepat, dan terjangkau di Kalimantan Timur. Spesialis landing page, portofolio UMKM, dan website bisnis kelas dunia.",
+    "areaServed": [
+      "Tenggarong",
+      "Samarinda",
+      "Balikpapan",
+      "Bontang",
+      "Sangatta",
+      "Penajam",
+      "Kutai Kartanegara",
+      "Kalimantan Timur"
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Website Development Services",
@@ -51,28 +61,28 @@ export default function JsonLd() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Website UMKM"
+            "name": "Jasa Pembuatan Website UMKM"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Personal Portfolio"
+            "name": "Jasa Landing Page Profesional"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Landing Page"
+            "name": "Jasa Website Portofolio"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Toko Online"
+            "name": "Jasa Web Design Kaltim"
           }
         }
       ]

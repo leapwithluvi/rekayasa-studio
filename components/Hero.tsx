@@ -42,7 +42,7 @@ export default function Hero() {
       
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <h1 className="hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold leading-[1] tracking-tighter text-charcoal mb-10 text-balance">
-          Desain <span className="italic text-amber-warm underline underline-offset-8 decoration-1 decoration-amber-warm/30">Elevasi</span> <br className="hidden sm:block" /> Bisnis Anda.
+          Jasa Website <span className="italic text-amber-warm underline underline-offset-8 decoration-1 decoration-amber-warm/30">Premium</span> <br className="hidden sm:block" /> untuk Elevasi Bisnis.
         </h1>
 
         <p className="hero-description max-w-2xl mx-auto text-lg md:text-xl text-charcoal/60 leading-relaxed font-medium mb-12 text-balance">
