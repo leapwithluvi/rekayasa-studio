@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og';
 export const runtime = 'edge';
 
 // Image metadata
-export const alt = 'Rekayasa Studio — Desain Elevasi Bisnis Anda';
+export const alt = 'Novareka — Jasa Website Premium & Solusi Digital';
 export const size = {
   width: 1200,
   height: 630,
@@ -59,7 +59,7 @@ export default async function Image() {
             marginBottom: 20
           }}
         >
-          Rekayasa Studio
+          Novareka
         </div>
 
         {/* Tagline */}
@@ -87,7 +87,7 @@ export default async function Image() {
             borderRadius: 4,
             letterSpacing: '0.1em'
         }}>
-            REKAYASASTUDIO.MY.ID
+            NOVAREKA.COM
         </div>
       </div>
     ),

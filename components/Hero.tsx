@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getWhatsAppUrl } from "@/lib/config";
 
 // Tech stack list as pure text
 const techs = [
@@ -62,12 +63,12 @@ export default function Hero() {
         </h1>
 
         <p className="hero-description max-w-2xl mx-auto text-lg md:text-xl text-charcoal/60 leading-relaxed font-medium mb-12 text-balance">
-          Kami membantu UMKM dan profesional membangun kehadiran digital kelas dunia melalui website yang elegan, kencang, dan siap mengonversi pengunjung menjadi klien.
+          Novareka membantu UMKM dan profesional membangun kehadiran digital kelas dunia — website elegan, kencang, dan siap mengonversi. Lebih banyak produk digital sedang dalam perjalanan.
         </p>
 
         <div className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link 
-            href="https://wa.me/6283152248722"
+            href={getWhatsAppUrl("Halo Novareka, saya ingin konsultasi mengenai pembuatan website untuk bisnis saya.")}
             target="_blank"
             rel="noopener noreferrer"
             className="group w-full sm:w-auto bg-charcoal text-off-white px-12 py-5 text-sm font-black uppercase tracking-[0.2em] rounded-sm hover:bg-amber-warm hover:text-charcoal transition-all duration-500 shadow-2xl flex items-center justify-center gap-3"

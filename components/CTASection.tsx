@@ -6,6 +6,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getWhatsAppUrl } from "@/lib/config";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +62,7 @@ export default function CTASection() {
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <Link 
-              href="https://wa.me/6283152248722"
+              href={getWhatsAppUrl("Halo Novareka, saya ingin mendiskusikan rencana pembuatan website untuk bisnis saya.")}
               target="_blank"
               rel="noopener noreferrer"
               className="group w-full md:w-auto bg-amber-warm text-charcoal px-12 py-6 text-sm font-black uppercase tracking-[0.2em] rounded-sm hover:bg-off-white transition-all duration-500 shadow-2xl flex items-center justify-center gap-4"

@@ -21,11 +21,14 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Jasa Pembuatan Website Tenggarong & Kaltim | Rekayasa Studio",
-    template: "%s | Jasa Website Rekayasa Studio",
+    default: "Novareka — Jasa Website Premium & Solusi Digital",
+    template: "%s | Novareka",
   },
-  description: "Solusi Jasa Pembuatan Website Profesional di Tenggarong & Kaltim. Spesialis Landing Page, UMKM, dan Website Bisnis dengan hasil premium & pengerjaan kilat.",
+  description:
+    "Novareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
   keywords: [
+    "novareka",
+    "novareka.com",
     "jasa website tenggarong",
     "jasa website samarinda",
     "jasa website balikpapan",
@@ -38,12 +41,11 @@ export const metadata: Metadata = {
     "jasa pembuatan website profesional",
     "jasa landing page murah",
     "jasa web design kaltim",
-    "rekayasa studio",
-    "web developer kalimantan timur"
+    "web developer kalimantan timur",
   ],
   authors: [{ name: "Luvi Aprilyansyah Gabriel" }],
   creator: "Luvi Aprilyansyah Gabriel",
-  publisher: "Rekayasa Studio",
+  publisher: "Novareka",
   formatDetection: {
     email: false,
     address: true,
@@ -58,22 +60,23 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    title: "Jasa Pembuatan Website Tenggarong & Kaltim | Rekayasa Studio",
-    description: "Solusi Jasa Pembuatan Website Profesional di Tenggarong & Kaltim. Spesialis Landing Page, UMKM, dan Website Bisnis dengan hasil premium & pengerjaan kilat.",
+    title: "Novareka — Jasa Website Premium & Solusi Digital",
+    description:
+      "Novareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
     url: SITE_URL,
-    siteName: "Rekayasa Studio",
+    siteName: "Novareka",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Rekayasa Studio — Jasa Pembuatan Website Profesional",
+        alt: "Novareka — Jasa Website Premium & Solusi Digital",
       },
     ],
     locale: "id_ID",
@@ -81,24 +84,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jasa Pembuatan Website Tenggarong & Kaltim | Rekayasa Studio",
-    description: "Solusi Jasa Pembuatan Website Profesional di Tenggarong & Kaltim. Spesialis Landing Page, UMKM, dan Website Bisnis dengan hasil premium & pengerjaan kilat.",
+    title: "Novareka — Jasa Website Premium & Solusi Digital",
+    description:
+      "Novareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
     images: ["/opengraph-image"],
   },
   icons: {
     icon: [
-      { url: "/favicon.png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon.png", sizes: "16x16", type: "image/png" },
     ],
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
-    other: [
-      {
-        rel: "icon",
-        url: "/favicon.png",
-      },
-    ],
+    shortcut: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
   },
 };
 

@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: "Ratna Sari",
     role: "Marketing Manager Oasis",
-    content: "Landing page dari Rekayasa Studio punya konversi yang sangat bagus. Proses kerjanya profesional dan sangat memperhatikan detail.",
+    content: "Landing page dari Novareka punya konversi yang sangat bagus. Proses kerjanya profesional dan sangat memperhatikan detail.",
   },
   {
     name: "Budi Pratama",

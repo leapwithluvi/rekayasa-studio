@@ -1,0 +1,22 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1c1b19"/>
+      <stop offset="100%" stop-color="#141312"/>
+    </linearGradient>
+    <linearGradient id="a" x1="22" y1="7" x2="42" y2="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark bg -->
+  <rect width="48" height="48" rx="10" fill="url(#bg)"/>
+  <!-- Icon: WHITE paths + amber crown, with padding -->
+  <g transform="translate(5, 5) scale(0.792)">
+    <path d="M8 38V14L18 8V32L8 38Z" fill="#FFFFFF" opacity="0.75"/>
+    <path d="M18 8L30 34V18L18 8Z" fill="#FFFFFF" opacity="0.55"/>
+    <path d="M30 18V42L40 36V10L30 18Z" fill="#FFFFFF" opacity="0.75"/>
+    <!-- Amber crown — full brightness, paling menonjol -->
+    <path d="M30 18L40 10L36 6L26 14L30 18Z" fill="url(#a)"/>
+  </g>
+</svg>

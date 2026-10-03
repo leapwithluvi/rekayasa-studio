@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Products from "@/components/Products";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import WhyMe from "@/components/WhyMe";
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <Hero />
+        <Products />
         <Services />
         <HowItWorks />
         <WhyMe />

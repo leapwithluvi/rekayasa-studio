@@ -80,10 +80,10 @@ export default function Services() {
   return (
     <section id="services" ref={container} className="py-32 px-6 bg-charcoal text-off-white scroll-mt-14">
       <div className="max-w-7xl mx-auto">
-        <div className="services-header mb-24">
-          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-amber-warm mb-8">Spesialisasi Kami</h2>
-          <h3 className="text-4xl md:text-6xl font-serif font-black tracking-tighter leading-tight max-w-3xl">
-            Solusi Digital yang <br /><span className="text-amber-warm italic">Bekerja</span> untuk Anda.
+        <div className="services-header mb-16 md:mb-24 text-center md:text-left">
+          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-amber-warm mb-6 md:mb-8">Spesialisasi Kami</h2>
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter leading-tight max-w-3xl mx-auto md:mx-0">
+            Solusi Digital yang <br className="hidden sm:inline" /><span className="text-amber-warm italic">Bekerja</span> untuk Anda.
           </h3>
         </div>
 

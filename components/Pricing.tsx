@@ -7,6 +7,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getWhatsAppUrl } from "@/lib/config";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,12 +23,14 @@ const plans = [
   {
     name: "Essential",
     price: "Mulai 450rb",
-    desc: "UMKM · Portfolio · Company Profile",
+    desc: "UMKM · Personal Portfolio · One-Page",
+    waMessage:
+      "Halo Novareka, saya tertarik untuk memesan Paket Essential (Mulai 450rb). Bisa bantu jelaskan alur pembuatannya?",
     features: [
-      "1 Halaman (Profile / Gallery)",
-      "Company Profile Profesional",
+      "1 Halaman Responsif (One-Page)",
+      "Profil Usaha / Portofolio Karya",
       "Mobile Responsive Design",
-      "WhatsApp & Sosmed Link",
+      "Integrasi WhatsApp & Sosmed",
       "Hosting Gratis Disediakan",
       "Koneksi Domain Custom",
       "SSL Certificate (HTTPS)",
@@ -40,19 +43,22 @@ const plans = [
   {
     name: "Growth",
     price: "850rb",
-    desc: "Landing Page · Sales Funnel · Brand",
+    desc: "Company Profile · Landing Page · Brand",
+    waMessage:
+      "Halo Novareka, saya tertarik untuk memesan Paket Growth (850rb) untuk Company Profile / Landing Page bisnis saya. Bisa mulai konsultasi?",
     features: [
-      "Hingga 3 Halaman / Section",
-      "Company Profile Multi-Halaman",
-      "High-Conv Copywriting Dasar",
+      "Company Profile Profesional & Elegan",
+      "Struktur Multi-Section Terarah",
+      "Katalog Layanan & Profil Bisnis",
       "Custom UI/UX Design Premium",
-      "Interactive Animations",
+      "Interactive Micro-Animations",
+      "High-Conv Copywriting Dasar",
+      "Integrasi Google Maps & Kontak",
       "Facebook Pixel / GA4 Setup",
-      "Google Search Console",
+      "Google Search Console (SEO)",
       "Hosting Gratis Disediakan",
       "Koneksi Domain Custom",
       "SSL Certificate (HTTPS)",
-      "SEO On-Page Dasar",
       "Selesai dalam 5–7 Hari",
       "3x Revisi",
     ],
@@ -62,22 +68,22 @@ const plans = [
   {
     name: "Business",
     price: "1.2jt",
-    desc: "E-Commerce · Online Store · Katalog",
+    desc: "Corporate · Katalog Lengkap · Multi-Page",
+    waMessage:
+      "Halo Novareka, saya tertarik untuk memesan Paket Business (1.2jt) untuk Website Corporate / Katalog Produk. Mohon informasi detailnya.",
     features: [
-      "Katalog Produk Lengkap",
-      "Sistem Keranjang Virtual",
-      "Integrasi WhatsApp Order",
-      "Manajemen Produk Dasar",
-      "Halaman Checkout Sederhana",
-      "Integrasi Pengiriman Dasar",
+      "Company Profile Multi-Halaman",
+      "Katalog Produk Lengkap & Rinci",
+      "Sistem Keranjang & WhatsApp Order",
+      "Manajemen Konten & Produk Dasar",
       "Custom UI/UX Design Premium",
+      "Interactive Micro-Animations",
+      "SEO On-Page & Indexing Cepat",
       "Hosting Gratis Disediakan",
       "Koneksi Domain Custom",
       "SSL Certificate (HTTPS)",
       "Facebook Pixel / GA4 Setup",
-      "Google Search Console",
-      "SEO On-Page Dasar",
-      "Panduan Update Produk",
+      "Panduan Update Konten & Produk",
       "Prioritas Support Teknis",
       "Selesai dalam 7–14 Hari",
       "5x Revisi",
@@ -309,7 +315,7 @@ export default function Pricing() {
 
                 {/* CTA */}
                 <Link
-                  href="https://wa.me/6283152248722"
+                  href={getWhatsAppUrl(plan.waMessage)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
@@ -332,7 +338,9 @@ export default function Pricing() {
             *Semua paket di atas sudah termasuk support teknis.{" "}
             <br className="md:hidden" />
             <Link
-              href="https://wa.me/6283152248722"
+              href={getWhatsAppUrl(
+                "Halo Novareka, saya ingin konsultasi mengenai pembuatan website dengan kebutuhan custom.",
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="text-charcoal underline underline-offset-4 ml-1"
