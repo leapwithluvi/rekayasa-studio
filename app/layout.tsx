@@ -4,6 +4,7 @@ import "./globals.css";
 import JsonLd from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SITE_URL } from "@/lib/config";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rekayasastudio.my.id"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Jasa Pembuatan Website Tenggarong & Kaltim | Rekayasa Studio",
     template: "%s | Jasa Website Rekayasa Studio",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jasa Pembuatan Website Tenggarong & Kaltim | Rekayasa Studio",
     description: "Solusi Jasa Pembuatan Website Profesional di Tenggarong & Kaltim. Spesialis Landing Page, UMKM, dan Website Bisnis dengan hasil premium & pengerjaan kilat.",
-    url: "https://rekayasastudio.my.id",
+    url: SITE_URL,
     siteName: "Rekayasa Studio",
     images: [
       {

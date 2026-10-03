@@ -1,13 +1,14 @@
 import React from "react";
+import { SITE_URL } from "@/lib/config";
 
 export default function JsonLd() {
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Rekayasa Studio",
-    "image": "https://rekayasastudio.my.id/opengraph-image",
-    "@id": "https://rekayasastudio.my.id",
-    "url": "https://rekayasastudio.my.id",
+    "image": `${SITE_URL}/opengraph-image`,
+    "@id": SITE_URL,
+    "url": SITE_URL,
     "telephone": "+6283152248722",
     "priceRange": "Rp 450.000 - Rp 1.200.000",
     "address": {
@@ -35,9 +36,7 @@ export default function JsonLd() {
       "opens": "08:00",
       "closes": "17:00"
     },
-    "sameAs": [
-      "https://rekayasastudio.my.id"
-    ],
+    "sameAs": [SITE_URL],
     "founder": {
       "@type": "Person",
       "name": "Luvi Aprilyansyah Gabriel"
@@ -93,10 +92,10 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Rekayasa Studio",
-    "url": "https://rekayasastudio.my.id",
+    "url": SITE_URL,
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://rekayasastudio.my.id/?s={search_term_string}",
+      "target": `${SITE_URL}/?s={search_term_string}`,
       "query-input": "required name=search_term_string"
     }
   };

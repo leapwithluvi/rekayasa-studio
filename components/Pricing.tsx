@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { Check, MessageCircle } from "lucide-react";
+import React, { useRef, useState } from "react";
+import { Check, X, MessageCircle, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import gsap from "gsap";
@@ -10,18 +10,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const notIncludedItems = [
+  "Pembelian Domain (.com, .id, dll.)",
+  "Pembuatan Konten & Teks Halaman",
+  "Desain Logo & Identitas Brand",
+  "Foto / Aset Visual Produk",
+  "Iklan Berbayar (Google/Meta Ads)",
+];
+
 const plans = [
   {
     name: "Essential",
     price: "Mulai 450rb",
-    desc: "UMKM & Personal Portfolio",
+    desc: "UMKM · Portfolio · Company Profile",
     features: [
-      "1 Halaman (Profile/Gallery)",
+      "1 Halaman (Profile / Gallery)",
+      "Company Profile Profesional",
       "Mobile Responsive Design",
       "WhatsApp & Sosmed Link",
-      "Selesai dalam 3-5 Hari",
+      "Hosting Gratis Disediakan",
+      "Koneksi Domain Custom",
       "SSL Certificate (HTTPS)",
-      "Bantuan Setup Domain",
+      "Selesai dalam 3–5 Hari",
+      "1x Revisi Minor",
     ],
     cta: "Pilih Paket Essential",
     featured: false,
@@ -29,14 +40,21 @@ const plans = [
   {
     name: "Growth",
     price: "850rb",
-    desc: "Landing Page & Sales Funnel",
+    desc: "Landing Page · Sales Funnel · Brand",
     features: [
-      "High-Conv Copywriting",
-      "Custom UI/UX Design",
-      "Facebook Pixel / GA4",
+      "Hingga 3 Halaman / Section",
+      "Company Profile Multi-Halaman",
+      "High-Conv Copywriting Dasar",
+      "Custom UI/UX Design Premium",
       "Interactive Animations",
+      "Facebook Pixel / GA4 Setup",
       "Google Search Console",
-      "Premium Design Standards",
+      "Hosting Gratis Disediakan",
+      "Koneksi Domain Custom",
+      "SSL Certificate (HTTPS)",
+      "SEO On-Page Dasar",
+      "Selesai dalam 5–7 Hari",
+      "3x Revisi",
     ],
     cta: "Pilih Paket Growth",
     featured: true,
@@ -44,56 +62,79 @@ const plans = [
   {
     name: "Business",
     price: "1.2jt",
-    desc: "E-Commerce & Online Store",
+    desc: "E-Commerce · Online Store · Katalog",
     features: [
-      "Katalog Produk WhatsApp",
+      "Katalog Produk Lengkap",
       "Sistem Keranjang Virtual",
+      "Integrasi WhatsApp Order",
       "Manajemen Produk Dasar",
+      "Halaman Checkout Sederhana",
       "Integrasi Pengiriman Dasar",
+      "Custom UI/UX Design Premium",
+      "Hosting Gratis Disediakan",
+      "Koneksi Domain Custom",
+      "SSL Certificate (HTTPS)",
+      "Facebook Pixel / GA4 Setup",
+      "Google Search Console",
+      "SEO On-Page Dasar",
       "Panduan Update Produk",
       "Prioritas Support Teknis",
+      "Selesai dalam 7–14 Hari",
+      "5x Revisi",
     ],
     cta: "Pilih Paket Business",
     featured: false,
   },
 ];
 
+const PREVIEW_COUNT = 4;
+
 export default function Pricing() {
   const container = useRef(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  useGSAP(() => {
-    ScrollTrigger.refresh();
+  function toggle(i: number) {
+    setExpandedIndex((prev) => (prev === i ? null : i));
+  }
 
-    gsap.fromTo(".pricing-card", 
-      { opacity: 0, y: 50 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 0.5,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".pricing-grid",
-          start: "top bottom-=100",
-          toggleActions: "play none none none",
-        }
-      }
-    );
+  useGSAP(
+    () => {
+      ScrollTrigger.refresh();
 
-    gsap.fromTo(".pricing-header", 
-      { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top bottom-=50",
-          toggleActions: "play none none none",
-        }
-      }
-    );
-  }, { scope: container });
+      gsap.fromTo(
+        ".pricing-card",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".pricing-grid",
+            start: "top bottom-=100",
+            toggleActions: "play none none none",
+          },
+        },
+      );
+
+      gsap.fromTo(
+        ".pricing-header",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top bottom-=50",
+            toggleActions: "play none none none",
+          },
+        },
+      );
+    },
+    { scope: container },
+  );
 
   return (
     <section
@@ -112,92 +153,178 @@ export default function Pricing() {
           </h3>
         </div>
 
-        <div className="pricing-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto items-stretch">
-          {plans.map((plan, i) => (
-            <div
-              key={i}
-              className={cn(
-                "pricing-card relative p-10 md:p-14 flex flex-col transition-all duration-500 rounded-sm border",
-                plan.featured
-                  ? "bg-charcoal text-off-white lg:scale-105 z-10 border-charcoal shadow-2xl shadow-charcoal/30"
-                  : "bg-white text-charcoal border-charcoal/5 scale-100",
-              )}
-            >
-              {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-warm text-charcoal px-6 py-2 text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
-                  Paling Populer
-                </div>
-              )}
+        <div className="pricing-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto items-start">
+          {plans.map((plan, i) => {
+            const isExpanded = expandedIndex === i;
+            const visibleFeatures = isExpanded
+              ? plan.features
+              : plan.features.slice(0, PREVIEW_COUNT);
+            const hiddenCount = plan.features.length - PREVIEW_COUNT;
 
-              <div className="mb-12 text-center">
-                <span
-                  className={cn(
-                    "text-[10px] font-black uppercase tracking-[0.3em]",
-                    plan.featured ? "text-amber-warm" : "text-charcoal/40",
-                  )}
-                >
-                  {plan.name}
-                </span>
-                <div className="mt-6 flex items-baseline justify-center gap-1 flex-nowrap">
-                  <span className="text-xl font-black tracking-tight">Rp</span>
-                  <span className="text-5xl sm:text-6xl md:text-7xl font-serif font-black tracking-tighter">
-                    {plan.price.replace("Mulai ", "")}
-                  </span>
-                </div>
-                {plan.price.includes("Mulai") && (
-                  <div className="text-[10px] font-black uppercase tracking-widest text-amber-warm mt-2">
-                    Mulai Dari
-                  </div>
-                )}
-                <p
-                  className={cn(
-                    "mt-8 text-[11px] font-bold uppercase tracking-widest leading-relaxed",
-                    plan.featured ? "text-off-white/40" : "text-charcoal/30",
-                  )}
-                >
-                  {plan.desc}
-                </p>
-              </div>
-
-              <ul className="space-y-4 mb-16 flex-1">
-                {plan.features.map((feat, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <div
-                      className={cn(
-                        "mt-0.5 w-5 h-5 rounded-full flex items-center justify-center shrink-0",
-                        plan.featured ? "bg-amber-warm/10" : "bg-charcoal/5",
-                      )}
-                    >
-                      <Check
-                        className={cn(
-                          "w-3 h-3",
-                          plan.featured ? "text-amber-warm" : "text-charcoal",
-                        )}
-                      />
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-tight leading-relaxed">
-                      {feat}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="https://wa.me/6283152248722"
-                target="_blank"
-                rel="noopener noreferrer"
+            return (
+              <div
+                key={i}
                 className={cn(
-                  "w-full py-6 flex items-center justify-center gap-4 text-xs font-black uppercase tracking-[0.2em] rounded-sm transition-all duration-300 shadow-xl shadow-charcoal/5",
+                  "pricing-card relative p-10 md:p-14 flex flex-col transition-all duration-500 rounded-sm border",
                   plan.featured
-                    ? "bg-amber-warm text-charcoal hover:bg-off-white"
-                    : "bg-charcoal text-off-white hover:bg-amber-warm hover:text-charcoal",
+                    ? "bg-charcoal text-off-white lg:scale-105 z-10 border-charcoal shadow-2xl shadow-charcoal/30"
+                    : "bg-white text-charcoal border-charcoal/5",
                 )}
               >
-                <MessageCircle size={18} />
-                {plan.cta}
-              </Link>
-            </div>
-          ))}
+                {plan.featured && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-warm text-charcoal px-6 py-2 text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+                    Paling Populer
+                  </div>
+                )}
+
+                {/* Price header */}
+                <div className="mb-10 text-center">
+                  <span
+                    className={cn(
+                      "text-[10px] font-black uppercase tracking-[0.3em]",
+                      plan.featured ? "text-amber-warm" : "text-charcoal/40",
+                    )}
+                  >
+                    {plan.name}
+                  </span>
+                  <div className="mt-6 flex items-baseline justify-center gap-1 flex-nowrap">
+                    <span className="text-xl font-black tracking-tight">
+                      Rp
+                    </span>
+                    <span className="text-5xl sm:text-6xl md:text-7xl font-serif font-black tracking-tighter">
+                      {plan.price.replace("Mulai ", "")}
+                    </span>
+                  </div>
+                  {plan.price.includes("Mulai") && (
+                    <div className="text-[10px] font-black uppercase tracking-widest text-amber-warm mt-2">
+                      Mulai Dari
+                    </div>
+                  )}
+                  <p
+                    className={cn(
+                      "mt-6 text-[11px] font-bold uppercase tracking-widest leading-relaxed",
+                      plan.featured ? "text-off-white/40" : "text-charcoal/30",
+                    )}
+                  >
+                    {plan.desc}
+                  </p>
+                </div>
+
+                {/* Feature list */}
+                <ul className="space-y-3.5 mb-4">
+                  {visibleFeatures.map((feat, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <div
+                        className={cn(
+                          "mt-0.5 w-5 h-5 rounded-full flex items-center justify-center shrink-0",
+                          plan.featured ? "bg-amber-warm/10" : "bg-charcoal/5",
+                        )}
+                      >
+                        <Check
+                          className={cn(
+                            "w-3 h-3",
+                            plan.featured ? "text-amber-warm" : "text-charcoal",
+                          )}
+                        />
+                      </div>
+                      <span className="text-xs font-bold uppercase tracking-tight leading-relaxed">
+                        {feat}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Expanded: tidak termasuk */}
+                {isExpanded && (
+                  <>
+                    <div
+                      className={cn(
+                        "border-t my-5",
+                        plan.featured
+                          ? "border-off-white/10"
+                          : "border-charcoal/8",
+                      )}
+                    />
+                    <p
+                      className={cn(
+                        "text-[9px] font-black uppercase tracking-[0.3em] mb-3",
+                        plan.featured
+                          ? "text-off-white/30"
+                          : "text-charcoal/25",
+                      )}
+                    >
+                      Tidak Termasuk
+                    </p>
+                    <ul className="space-y-2.5 mb-4">
+                      {notIncludedItems.map((item, j) => (
+                        <li key={j} className="flex items-start gap-3">
+                          <div
+                            className={cn(
+                              "mt-0.5 w-5 h-5 rounded-full flex items-center justify-center shrink-0",
+                              plan.featured ? "bg-red-500/10" : "bg-red-500/5",
+                            )}
+                          >
+                            <X className="w-3 h-3 text-red-400" />
+                          </div>
+                          <span
+                            className={cn(
+                              "text-xs font-bold uppercase tracking-tight leading-relaxed",
+                              plan.featured
+                                ? "text-off-white/30"
+                                : "text-charcoal/30",
+                            )}
+                          >
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+
+                {/* Toggle button */}
+                {hiddenCount > 0 && (
+                  <button
+                    onClick={() => toggle(i)}
+                    className={cn(
+                      "flex items-center gap-2 text-[10px] font-black uppercase tracking-widest mb-8 mt-1 transition-colors",
+                      plan.featured
+                        ? "text-amber-warm hover:text-off-white"
+                        : "text-charcoal/40 hover:text-charcoal",
+                    )}
+                    aria-expanded={isExpanded}
+                  >
+                    <ChevronDown
+                      size={14}
+                      className={cn(
+                        "transition-transform duration-300",
+                        isExpanded && "rotate-180",
+                      )}
+                    />
+                    {isExpanded
+                      ? "Sembunyikan"
+                      : `Lihat Detail (+${hiddenCount} lainnya)`}
+                  </button>
+                )}
+
+                {/* CTA */}
+                <Link
+                  href="https://wa.me/6283152248722"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "mt-auto w-full py-6 flex items-center justify-center gap-4 text-xs font-black uppercase tracking-[0.2em] rounded-sm transition-all duration-300 shadow-xl shadow-charcoal/5",
+                    plan.featured
+                      ? "bg-amber-warm text-charcoal hover:bg-off-white"
+                      : "bg-charcoal text-off-white hover:bg-amber-warm hover:text-charcoal",
+                  )}
+                >
+                  <MessageCircle size={18} />
+                  {plan.cta}
+                </Link>
+              </div>
+            );
+          })}
         </div>
 
         <div className="mt-20 text-center">

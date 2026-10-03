@@ -64,7 +64,7 @@ export default function Testimonials() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="py-24 md:py-32 px-6 bg-charcoal overflow-hidden">
+    <section id="testimonials" ref={container} className="py-24 md:py-32 px-6 bg-charcoal overflow-hidden scroll-mt-14">
       <div className="max-w-7xl mx-auto">
         <div className="testi-header text-center mb-16 md:24">
           <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-amber-warm/60 mb-6 md:8">Testimoni</h2>
