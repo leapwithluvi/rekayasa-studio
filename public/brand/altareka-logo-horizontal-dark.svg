@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 360" width="1500" height="360">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@800;900&amp;display=swap');
+      .brand-title {
+        font-family: 'Cinzel', 'Times New Roman', Georgia, serif;
+        font-weight: 900;
+        font-size: 155px;
+        letter-spacing: -1.5px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Monolith Towers Emblem -->
+  <g transform="translate(60, 33) scale(1.15)">
+    <path d="M44 220V112L116 40V220H44Z" fill="#f5f4f0" />
+    <path d="M140 220V40L212 112V220H140Z" fill="#c8a96e" />
+  </g>
+
+  <!-- Pure Brand Typography: ALTAREKA. -->
+  <text x="390" y="235" class="brand-title" fill="#f5f4f0">ALTAREKA<tspan fill="#c8a96e">.</tspan></text>
+</svg>

@@ -77,9 +77,9 @@ export default function HowItWorks() {
   }, { scope: container });
 
   return (
-    <section id="how-it-works" ref={container} className="py-32 px-6 bg-off-white overflow-hidden scroll-mt-14">
+    <section id="how-it-works" ref={container} className="py-16 md:py-24 px-6 bg-off-white overflow-hidden scroll-mt-14">
       <div className="max-w-7xl mx-auto">
-        <div className="how-header text-center mb-24">
+        <div className="how-header text-center mb-12 md:mb-16">
           <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/40 mb-8 font-sans text-balance">Proses Kerja</h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-charcoal text-balance px-4">
             Langkah Menuju <span className="italic">Kesuksesan.</span>

@@ -62,13 +62,13 @@ export default function Hero() {
           Jasa Website <span className="italic text-amber-warm underline underline-offset-8 decoration-1 decoration-amber-warm/30">Premium</span> <br className="hidden sm:block" /> untuk Elevasi Bisnis.
         </h1>
 
-        <p className="hero-description max-w-2xl mx-auto text-lg md:text-xl text-charcoal/60 leading-relaxed font-medium mb-12 text-balance">
-          Novareka membantu UMKM dan profesional membangun kehadiran digital kelas dunia — website elegan, kencang, dan siap mengonversi. Lebih banyak produk digital sedang dalam perjalanan.
+        <p className="hero-description max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-charcoal/65 leading-relaxed font-medium mb-12 text-balance">
+          Altareka merancang website berstandar enterprise untuk <strong className="text-charcoal font-bold">Company Profile PT</strong>, <strong className="text-charcoal font-bold">Katalog UMKM</strong>, dan <strong className="text-charcoal font-bold">Portofolio Profesional</strong> — elegan, secepat kilat, dan siap menghasilkan konversi bisnis nyata.
         </p>
 
         <div className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link 
-            href={getWhatsAppUrl("Halo Novareka, saya ingin konsultasi mengenai pembuatan website untuk bisnis saya.")}
+            href={getWhatsAppUrl("Halo Altareka, saya ingin konsultasi mengenai pembuatan website untuk bisnis saya.")}
             target="_blank"
             rel="noopener noreferrer"
             className="group w-full sm:w-auto bg-charcoal text-off-white px-12 py-5 text-sm font-black uppercase tracking-[0.2em] rounded-sm hover:bg-amber-warm hover:text-charcoal transition-all duration-500 shadow-2xl flex items-center justify-center gap-3"

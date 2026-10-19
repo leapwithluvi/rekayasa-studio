@@ -5,7 +5,7 @@ export default function JsonLd() {
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Novareka",
+    "name": "Altareka",
     "image": `${SITE_URL}/opengraph-image`,
     "@id": SITE_URL,
     "url": SITE_URL,
@@ -41,7 +41,7 @@ export default function JsonLd() {
       "@type": "Person",
       "name": "Luvi Aprilyansyah Gabriel"
     },
-    "description": "Solusi Jasa Pembuatan Website & Platform Digital Modern oleh Novareka. Spesialis Company Profile, Landing Page, dan Website Bisnis Premium.",
+    "description": "Solusi Jasa Pembuatan Website & Platform Digital Modern oleh Altareka. Spesialis Company Profile, Landing Page, dan Website Bisnis Premium.",
     "areaServed": [
       "Tenggarong",
       "Samarinda",
@@ -91,7 +91,7 @@ export default function JsonLd() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Novareka",
+    "name": "Altareka",
     "url": SITE_URL,
     "potentialAction": {
       "@type": "SearchAction",
@@ -107,7 +107,7 @@ export default function JsonLd() {
     "jobTitle": "Web Developer & Designer",
     "worksFor": {
       "@type": "Organization",
-      "name": "Novareka"
+      "name": "Altareka"
     },
     "address": {
       "@type": "PostalAddress",

@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/brand/novareka-logo-dark.svg" alt="Novareka Studio Logo" width="340" />
+  <img src="public/brand/altareka-logo-dark.svg" alt="Altareka Logo" width="340" />
 
   <p align="center">
     <strong>Arsitektur Digital Presisi Tinggi · Desain Eksklusif · Solusi Web Kelas Dunia</strong>
@@ -26,7 +26,7 @@
 ---
 
 > [!NOTE]
-> **Novareka** adalah landing platform dan studio digital berstandar enterprise yang didesain dengan pendekatan arsitektur web modern, tipografi editorial mewah (_Syne & DM Sans_), performa loading secepat kilat (_PageSpeed 95+_), serta struktur kode bersih yang siap diskalakan ke berbagai produk digital di masa depan.
+> **Altareka** adalah landing platform dan studio digital berstandar enterprise yang didesain dengan pendekatan arsitektur web modern, tipografi editorial mewah (_Syne & DM Sans_), performa loading secepat kilat (_PageSpeed 95+_), serta struktur kode bersih yang siap diskalakan ke berbagai produk digital di masa depan.
 
 ---
 
@@ -49,7 +49,7 @@
 
 ## 1. Ringkasan Eksekutif
 
-Platform ini dibangun untuk merepresentasikan **Novareka** sebagai studio arsitektur web independen yang melayani pembuatan website berkualitas tinggi di Indonesia dan mancanegara:
+Platform ini dibangun untuk merepresentasikan **Altareka** sebagai studio arsitektur web independen yang melayani pembuatan website berkualitas tinggi di Indonesia dan mancanegara:
 
 - **Fokus Utama:** Pembuatan _High-Conversion Landing Page_, _Corporate Company Profile_, _Custom Web Application_, dan _E-Commerce Architecture_.
 - **Filosofi Visual:** Mengadopsi palet monokrom mewah (_Charcoal Onyx `#0d0d0c` & Off-White `#f5f4f0`_) dengan aksen _Warm Champagne Amber (`#c8a96e`)_, memancarkan kesan atelier berkelas tanpa elemen dekoratif berlebih.
@@ -62,7 +62,7 @@ Platform ini dibangun untuk merepresentasikan **Novareka** sebagai studio arsite
 
 ## 2. Prinsip & Standar Rekayasa
 
-Pengembangan basis kode Novareka tunduk pada 4 pilar arsitektur:
+Pengembangan basis kode Altareka tunduk pada 4 pilar arsitektur:
 
 | Pilar                      | Deskripsi                                                                                                           | Implementasi                                                                        |
 | :------------------------- | :------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------- |
@@ -114,6 +114,7 @@ rekayasa-studio/
 │   ├── robots.ts               # Generator Direktif Robot Web Crawler
 │   └── sitemap.ts              # Generator Sitemap XML Dinamis
 ├── components/
+│   ├── AltarekaLogo.tsx       # Logo Geometrik Altareka (Dark/Light Varian)
 │   ├── CTASection.tsx          # Komponen Call-to-Action Proyek
 │   ├── FAQ.tsx                 # Accordion Tanya Jawab Interaktif
 │   ├── Footer.tsx              # Footer Studio, Vektor Brand & Fast Hub
@@ -121,7 +122,6 @@ rekayasa-studio/
 │   ├── HowItWorks.tsx          # Alur & Fase Rekayasa Website (1-4)
 │   ├── JsonLd.tsx              # Structured Data Schema.org
 │   ├── Navbar.tsx              # Navigasi Glassmorphic & Mobile Drawer
-│   ├── NovarekaLogo.tsx        # Logo Geometrik Novareka (Dark/Light Varian)
 │   ├── Portfolio.tsx           # Galeri Portofolio & Modal Detail
 │   ├── Pricing.tsx             # Tabel Paket Investasi & Fitur
 │   ├── Products.tsx            # Etalase Ekosistem Produk / Inovasi
@@ -133,11 +133,10 @@ rekayasa-studio/
 │   └── utils.ts                # Helper Utility Fungsi (clsx, twMerge)
 ├── public/
 │   ├── brand/                  # Master Aset Brand (SVG & HD PNG Transparent)
-│   │   ├── novareka-favicon-hd.png
-│   │   ├── novareka-icon-dark.png / .svg
-│   │   ├── novareka-icon-white.png / .svg
-│   │   ├── novareka-logo-dark.png / .svg
-│   │   └── novareka-logo-light.png / .svg
+│   │   ├── altareka-icon-dark.svg
+│   │   ├── altareka-icon-white.svg
+│   │   ├── altareka-logo-dark.svg
+│   │   └── altareka-logo-light.svg
 │   ├── apple-touch-icon.png    # Ikon Beranda iOS (180x180)
 │   ├── favicon.png             # Favicon Standar PNG (32x32)
 │   └── favicon.svg             # Favicon Modern Skalabel SVG
@@ -194,10 +193,10 @@ rekayasa-studio/
 
 Konfigurasikan variabel lingkungan pada file `.env.local` untuk memastikan metadata URL dan nomor kontak WhatsApp berjalan dinamis:
 
-| Nama Variabel          | Tipe Data |  Wajib   | Nilai Standar                  | Keterangan                                                                   |
-| :--------------------- | :-------: | :------: | :----------------------------- | :--------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | `string`  |    Ya    | `https://rekayasastudio.my.id` | Domain root aplikasi untuk keperluan Canonical URL, Sitemap, dan OG Image.   |
-| `NEXT_PUBLIC_WA_PHONE` | `string`  | Opsional | `6283152248722`                | Nomor WhatsApp bisnis Novareka dalam format internasional (tanpa tanda `+`). |
+| Nama Variabel          | Tipe Data |  Wajib   | Nilai Standar                  | Keterangan                                                                     |
+| :--------------------- | :-------: | :------: | :----------------------------- | :----------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | `string`  |    Ya    | `https://rekayasastudio.my.id` | Domain root aplikasi untuk keperluan Canonical URL, Sitemap, dan OG Image.     |
+| `NEXT_PUBLIC_WA_PHONE` | `string`  | Opsional | `6283152248722`                | Nomor WhatsApp bisnis Altareka dalam format internasional (tanpa tanda `+`).  |
 
 > [!WARNING]
 > Jangan sertakan tanda garis miring di akhir (_trailing slash_) pada variabel `NEXT_PUBLIC_SITE_URL` untuk mencegah duplikasi URL kanonikal (`https://domain.com/` bukan `https://domain.com//`).
@@ -209,15 +208,15 @@ Konfigurasikan variabel lingkungan pada file `.env.local` untuk memastikan metad
 <details open>
 <summary><strong>🔍 Klik untuk melihat rincian fungsionalitas komponen utama</strong></summary>
 
-| Komponen         | Jalur Berkas                                                         | Karakteristik Utama                                                                                                                 |
-| :--------------- | :------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| **Navbar**       | [`components/Navbar.tsx`](file:///components/Navbar.tsx)             | Header _frosted-glass_ dinamis, mobile drawer layar penuh bebas dependensi berat, scroll offset 80px, direct WA CTA.                |
-| **Hero**         | [`components/Hero.tsx`](file:///components/Hero.tsx)                 | Animasi kemunculan GSAP timeline, background mesh grid, marquee ticker tech stack tanpa batas.                                      |
-| **NovarekaLogo** | [`components/NovarekaLogo.tsx`](file:///components/NovarekaLogo.tsx) | Logo geometrik parametrik 48x48. Mendukung mode `variant="dark"` dan `variant="light"` dengan ID gradien terisolasi.                |
-| **Services**     | [`components/Services.tsx`](file:///components/Services.tsx)         | Grid kartu spesialisasi 4-kolom, animasi rotasi ikon saat hover, heading simetris tengah di mobile.                                 |
-| **Portfolio**    | [`components/Portfolio.tsx`](file:///components/Portfolio.tsx)       | Galeri karya interaktif dengan modal dialog detail proyek lengkap, preview gambar rasio aspek responsif.                            |
-| **Pricing**      | [`components/Pricing.tsx`](file:///components/Pricing.tsx)           | Tabel paket investasi transparan (Starter, Pro, Enterprise) dengan penandaan paket unggulan dan tombol WhatsApp terintegrasi.       |
-| **Footer**       | [`components/Footer.tsx`](file:///components/Footer.tsx)             | Latar obsidian mewah, kartu cepat hubungi WhatsApp & surel (salin instan), navigasi terstruktur, dan watermark vektor Syne presisi. |
+| Komponen           | Jalur Berkas                                                               | Karakteristik Utama                                                                                                                 |
+| :----------------- | :------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| **Navbar**         | [`components/Navbar.tsx`](file:///components/Navbar.tsx)                   | Header _frosted-glass_ dinamis, mobile drawer layar penuh bebas dependensi berat, scroll offset 80px, direct WA CTA.                |
+| **Hero**           | [`components/Hero.tsx`](file:///components/Hero.tsx)                       | Animasi kemunculan GSAP timeline, background mesh grid, marquee ticker tech stack tanpa batas.                                      |
+| **AltarekaLogo**  | [`components/AltarekaLogo.tsx`](file:///components/AltarekaLogo.tsx)     | Logo geometrik parametrik 48x48. Mendukung mode `variant="dark"` dan `variant="light"` dengan ID gradien terisolasi.                |
+| **Services**       | [`components/Services.tsx`](file:///components/Services.tsx)               | Grid kartu spesialisasi 4-kolom, animasi rotasi ikon saat hover, heading simetris tengah di mobile.                                 |
+| **Portfolio**      | [`components/Portfolio.tsx`](file:///components/Portfolio.tsx)             | Galeri karya interaktif dengan modal dialog detail proyek lengkap, preview gambar rasio aspek responsif.                            |
+| **Pricing**        | [`components/Pricing.tsx`](file:///components/Pricing.tsx)                 | Tabel paket investasi transparan (Starter, Pro, Enterprise) dengan penandaan paket unggulan dan tombol WhatsApp terintegrasi.       |
+| **Footer**         | [`components/Footer.tsx`](file:///components/Footer.tsx)                   | Latar obsidian mewah, kartu cepat hubungi WhatsApp & surel (salin instan), navigasi terstruktur, dan watermark vektor Syne presisi. |
 
 </details>
 
@@ -251,7 +250,7 @@ npm run start
 
 ## 9. Standar SEO, Open Graph & Aksesibilitas
 
-Platform Novareka dikonfigurasi dengan standar SEO teknis tingkat tinggi:
+Platform Altareka dikonfigurasi dengan standar SEO teknis tingkat tinggi:
 
 ```mermaid
 graph LR
@@ -277,7 +276,7 @@ Platform ini dirancang siap pakai (_zero-configuration_) pada Vercel:
 1. Hubungkan akun GitHub Anda ke [Vercel Dashboard](https://vercel.com).
 2. Pilih repositori `rekayasa-studio`.
 3. Tambahkan environment variable:
-   - `NEXT_PUBLIC_SITE_URL` = `https://novareka.com` (atau domain produksi Anda).
+   - `NEXT_PUBLIC_SITE_URL` = `https://altareka.com` (atau domain produksi Anda).
 4. Klik **Deploy**. Vercel akan otomatis mengompilasi dan mengaktifkan jaringan Edge Global CDN.
 
 ### B. Deploy Mandiri (VPS / Docker / Linux Server)
@@ -294,7 +293,7 @@ Platform ini dirancang siap pakai (_zero-configuration_) pada Vercel:
 2. **Jalankan via PM2 Process Manager:**
 
    ```bash
-   pm2 start npm --name "novareka-studio" -- start -- -p 3000
+   pm2 start npm --name "altareka-studio" -- start -- -p 3000
    pm2 save
    ```
 
@@ -303,7 +302,7 @@ Platform ini dirancang siap pakai (_zero-configuration_) pada Vercel:
    ```nginx
    server {
        listen 80;
-       server_name novareka.com www.novareka.com;
+       server_name altareka.com www.altareka.com;
 
        location / {
            proxy_pass http://127.0.0.1:3000;
@@ -349,6 +348,6 @@ Platform ini dirancang siap pakai (_zero-configuration_) pada Vercel:
 Proyek ini didistribusikan di bawah lisensi **MIT License**. Anda bebas menggunakan kode ini sebagai rujukan atau basis pengembangan proyek pribadi maupun komersial.
 
 ```text
-Copyright (c) 2026 NOVAREKA. All Rights Reserved.
+Copyright (c) 2026 ALTAREKA. All Rights Reserved.
 Didesain dan dikembangkan dengan presisi oleh Luvi Aprilyansyah Gabriel.
 ```

@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: "Ratna Sari",
     role: "Marketing Manager Oasis",
-    content: "Landing page dari Novareka punya konversi yang sangat bagus. Proses kerjanya profesional dan sangat memperhatikan detail.",
+    content: "Landing page dari Altareka punya konversi yang sangat bagus. Proses kerjanya profesional dan sangat memperhatikan detail.",
   },
   {
     name: "Budi Pratama",
@@ -64,9 +64,9 @@ export default function Testimonials() {
   }, { scope: container });
 
   return (
-    <section id="testimonials" ref={container} className="py-24 md:py-32 px-6 bg-charcoal overflow-hidden scroll-mt-14">
+    <section id="testimonials" ref={container} className="py-16 md:py-24 px-6 bg-charcoal overflow-hidden scroll-mt-14">
       <div className="max-w-7xl mx-auto">
-        <div className="testi-header text-center mb-16 md:24">
+        <div className="testi-header text-center mb-12 md:mb-16">
           <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-amber-warm/60 mb-6 md:8">Testimoni</h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-off-white text-balance">
             Mereka yang Berhasil <br className="hidden sm:block" /><span className="text-amber-warm italic">Tampil Beda.</span>

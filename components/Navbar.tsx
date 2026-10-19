@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getWhatsAppUrl } from "@/lib/config";
-import NovarekaLogo from "@/components/NovarekaLogo";
+import AltarekaLogo from "@/components/AltarekaLogo";
 
 const navLinks = [
   { name: "Beranda", href: "#home" },
@@ -63,11 +63,11 @@ export default function Navbar() {
           href="#home"
           onClick={(e) => scrollTo(e, "#home")}
           className="group flex items-center gap-3 shrink-0"
-          aria-label="Novareka Home"
+          aria-label="Altareka Home"
         >
-          <NovarekaLogo size={32} />
+          <AltarekaLogo size={32} />
           <span className="font-serif font-black text-xl tracking-tighter uppercase text-charcoal">
-            Novareka<span className="text-amber-warm italic">.</span>
+            Altareka<span className="text-amber-warm italic">.</span>
           </span>
         </Link>
 
@@ -89,7 +89,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href={getWhatsAppUrl(
-              "Halo Novareka, saya ingin konsultasi proyek pembuatan website baru. Bisa info alurnya?",
+              "Halo Altareka, saya ingin konsultasi proyek pembuatan website baru. Bisa info alurnya?",
             )}
             target="_blank"
             rel="noopener noreferrer"
@@ -126,9 +126,9 @@ export default function Navbar() {
         {/* Top Bar inside Drawer: Brand Logo + Close Button */}
         <div className="flex items-center justify-between pb-6 border-b border-charcoal/5">
           <div className="flex items-center gap-3">
-            <NovarekaLogo size={32} />
+            <AltarekaLogo size={32} />
             <span className="font-serif font-black text-xl tracking-tighter uppercase text-charcoal">
-              Novareka<span className="text-amber-warm italic">.</span>
+              Altareka<span className="text-amber-warm italic">.</span>
             </span>
           </div>
 
@@ -164,7 +164,7 @@ export default function Navbar() {
         <div className="pt-4">
           <Link
             href={getWhatsAppUrl(
-              "Halo Novareka, saya ingin konsultasi proyek pembuatan website baru. Bisa info alurnya?",
+              "Halo Altareka, saya ingin konsultasi proyek pembuatan website baru. Bisa info alurnya?",
             )}
             target="_blank"
             rel="noopener noreferrer"

@@ -74,8 +74,8 @@ export default function WhyMe() {
   }, { scope: container });
 
   return (
-    <section id="why-me" ref={container} className="whyme-container py-24 md:py-32 px-6 bg-off-white overflow-hidden scroll-mt-14">
-      <div className="whyme-grid max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 md:gap-20 items-center border-t border-charcoal/5 pt-24 md:pt-32">
+    <section id="why-me" ref={container} className="whyme-container py-16 md:py-24 px-6 bg-off-white overflow-hidden scroll-mt-14">
+      <div className="whyme-grid max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-16 items-center border-t border-charcoal/5 pt-8 md:pt-12">
         <div className="whyme-text">
           <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/40 mb-8 font-sans text-balance">Keunggulan</h2>
           <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-black tracking-tighter text-charcoal leading-tight mb-8 text-balance">

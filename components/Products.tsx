@@ -14,7 +14,7 @@ const products = [
   {
     icon: BarChart3,
     tag: "SaaS · Coming Soon",
-    name: "Novareka Analytics",
+    name: "Altareka Analytics",
     tagline: "Insight bisnis tanpa ribet.",
     desc: "Dashboard analitik sederhana untuk UMKM — pantau performa website, traffic, dan konversi dalam satu layar. Tidak perlu ahli data.",
     accent: true,
@@ -22,7 +22,7 @@ const products = [
   {
     icon: Zap,
     tag: "Tool · Coming Soon",
-    name: "Novareka Pages",
+    name: "Altareka Pages",
     tagline: "Landing page dalam 5 menit.",
     desc: "Builder landing page drag-and-drop khusus bisnis Indonesia. Template lokal, integrasi WhatsApp & pembayaran siap pakai.",
     accent: false,
@@ -30,7 +30,7 @@ const products = [
   {
     icon: Sparkles,
     tag: "AI · Coming Soon",
-    name: "Novareka Copy",
+    name: "Altareka Copy",
     tagline: "Copywriting yang menjual, otomatis.",
     desc: "Tulis konten promosi, caption media sosial, dan deskripsi produk dalam Bahasa Indonesia yang natural — ditenagai AI.",
     accent: false,
@@ -103,11 +103,11 @@ export default function Products() {
     <section
       id="produk"
       ref={container}
-      className="py-32 px-6 bg-off-white scroll-mt-14"
+      className="py-16 md:py-24 px-6 bg-off-white scroll-mt-14"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="products-header flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8 mb-16 md:mb-24 text-center md:text-left">
+        <div className="products-header flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8 mb-12 md:mb-16 text-center md:text-left">
           <div className="max-w-2xl mx-auto md:mx-0">
             <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-amber-warm mb-6 md:mb-8">
               Produk Kami
@@ -210,7 +210,7 @@ export default function Products() {
           </div>
           <Link
             href={getWhatsAppUrl(
-              "Halo Novareka! Saya tertarik dengan produk yang sedang kalian kembangkan. Bisa info lebih lanjut soal early access?"
+              "Halo Altareka! Saya tertarik dengan produk yang sedang kalian kembangkan. Bisa info lebih lanjut soal early access?"
             )}
             target="_blank"
             rel="noopener noreferrer"

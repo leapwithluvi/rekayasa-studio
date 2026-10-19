@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <title>Altareka Monolith Pillars</title>
+  <!-- Left Pillar (Obsidian Charcoal) -->
+  <path
+    d="M44 220V112L116 40V220H44Z"
+    fill="#0d0d0c"
+  />
+  <!-- Right Pillar (Warm Amber Gold) -->
+  <path
+    d="M140 220V40L212 112V220H140Z"
+    fill="#c8a96e"
+  />
+</svg>

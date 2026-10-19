@@ -11,28 +11,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
-    q: "Berapa lama pengerjaan website?",
-    a: "Estimasi pengerjaan bergantung pada paket: Essential (3-5 hari), Growth (5-10 hari), dan Business (2-4 minggu) tergantung kompleksitas fitur.",
+    q: "Berapa lama estimasi pengerjaan website?",
+    a: "Bergantung pada paket: Paket Kilat / Katalog Simpel (2-4 hari), Paket Pro / Katalog Plus (4-7 hari), hingga Paket PT & Bisnis Online (1-3 minggu) terhitung setelah materi dan DP diterima.",
   },
   {
-    q: "Apakah bisa request desain sendiri?",
-    a: "Tentu saja. Kami sangat terbuka jika Anda memiliki referensi desain atau brand guideline sendiri. Kami akan menyesuaikan teknologi kami dengan visi desain Anda.",
+    q: "Apakah bisa request desain atau konsep sendiri?",
+    a: "Tentu saja. Kami sangat terbuka jika Anda memiliki referensi desain, warna brand, atau struktur sendiri. Kami akan menyesuaikan arsitektur web dengan kebutuhan dan identitas bisnis Anda.",
   },
   {
-    q: "Apakah ada biaya tambahan setelah selesai?",
-    a: "Tidak ada biaya tersembunyi. Harga yang tertera sudah final sesuai paket yang disepakati di awal proyek.",
+    q: "Bagaimana alur pengerjaan dan komunikasinya?",
+    a: "Seluruh komunikasi dan serah terima materi dilakukan secara fleksibel melalui WhatsApp, Google Meet, atau email. Anda akan menerima link preview website secara berkala untuk memantau progres sebelum diterbitkan secara resmi.",
+  },
+  {
+    q: "Apakah ada biaya tersembunyi setelah website selesai?",
+    a: "Tidak ada biaya tersembunyi. Biaya sesuai kesepakatan paket di awal. Untuk paket tanpa panel admin, hosting statis & SSL sudah gratis selamanya. Domain .my.id gratis untuk 1 tahun pertama.",
   },
   {
     q: "Apakah website bisa diedit sendiri setelah jadi?",
-    a: "Bergantung pada paket. Paket Growth & Business telah dilengkapi dengan panduan pengelolaan konten dasar agar Anda bisa melakukan update mandiri.",
+    a: "Untuk paket yang menyertakan panel admin (Bisnis Online UMKM & PT Premium), Anda bisa mengelola produk, harga, dan artikel sendiri secara mandiri lengkap dengan panduan dan sesi pelatihan.",
   },
   {
-    q: "Apakah melayani luar Kalimantan Timur?",
-    a: "Ya, meskipun kami berbasis di Kalimantan Timur, kami melayani klien dari seluruh Indonesia secara online melalui koordinasi digital yang efektif.",
-  },
-  {
-    q: "Bagaimana cara memulai?",
-    a: "Cukup klik tombol 'Mulai Diskusi'. Kami akan segera merespons kebutuhan Anda melalui WhatsApp dalam waktu maksimal 1x24 jam.",
+    q: "Bagaimana cara memulai pemesanan?",
+    a: "Cukup klik tombol 'Konsultasi Sekarang' atau chat langsung ke WhatsApp kami. Kami akan merespons cepat untuk mendiskusikan kebutuhan website Anda.",
   },
 ];
 
@@ -96,9 +96,9 @@ export default function FAQ() {
   }, { dependencies: [openIndex] });
 
   return (
-    <section id="faq" ref={container} className="py-24 md:py-32 px-6 bg-off-white overflow-hidden scroll-mt-14">
+    <section id="faq" ref={container} className="py-16 md:py-24 px-6 bg-off-white overflow-hidden scroll-mt-14">
       <div className="max-w-4xl mx-auto">
-        <div className="faq-header text-center mb-16 md:24 border-t border-charcoal/5 pt-24 md:pt-32">
+        <div className="faq-header text-center mb-12 md:mb-16 border-t border-charcoal/5 pt-8 md:pt-12">
           <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/40 mb-6 md:8 text-balance">Pusat Informasi</h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-charcoal text-balance">
             Pertanyaan <span className="text-amber-warm italic">Umum.</span>

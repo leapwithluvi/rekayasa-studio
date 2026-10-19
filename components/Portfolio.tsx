@@ -1,59 +1,29 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { X, ExternalLink, Quote, MessageCircle } from "lucide-react";
+import {
+  ExternalLink,
+  Quote,
+  MessageCircle,
+  Globe,
+  Sparkles,
+  CheckCircle2,
+  Zap,
+  ShieldCheck,
+  TrendingUp,
+  Clock,
+  ArrowRight,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 import { getWhatsAppUrl } from "@/lib/config";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface Project {
-  title: string;
-  category: string;
-  img: string;
-  description?: string;
-  techStack?: string[];
-  liveUrl?: string;
-  testimonial?: { text: string; author: string };
-  isPlaceholder?: boolean;
-}
-
-// ─────────────────────────────────────────────
-// TODO: Isi data project nyata di sini
-// ─────────────────────────────────────────────
-const projects: Project[] = [
-  {
-    title: "Company Profile & Katalog Produk",
-    category: "Landing Page",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNAGjSiu1qnBelxMM03sRBdR8qoa_J4aRie9kcefLVqQ&s=10",
-    description:
-      "Website company profile dan katalog produk untuk PT. Bumi Kutai Perkasa yang bergerak di bidang penyedia batu Koral/Split, Batu Agregat, Batu Pondasi, Batu Tronjolan, dan Batu Abu. Melayani area Kutai Kartanegara dan sekitarnya.",
-    techStack: ["Next.js", "Tailwind CSS"],
-    liveUrl: "https://www.bumikutaiperkasa.co.id",
-    testimonial: {
-      text: "Testimoni dari klien.",
-      author: "Nama Klien",
-    },
-  },
-  {
-    title: "Segera Hadir",
-    category: "Project Berikutnya",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
-    isPlaceholder: true,
-  },
-  {
-    title: "Segera Hadir",
-    category: "Project Berikutnya",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800",
-    isPlaceholder: true,
-  },
-];
-
 export default function Portfolio() {
-  const container = useRef(null);
-  const [selected, setSelected] = useState<Project | null>(null);
+  const container = useRef<HTMLElement>(null);
 
   useGSAP(
     () => {
@@ -68,25 +38,39 @@ export default function Portfolio() {
           duration: 0.8,
           scrollTrigger: {
             trigger: container.current,
-            start: "top bottom-=100",
+            start: "top bottom-=80",
             toggleActions: "play none none none",
           },
         },
       );
 
       gsap.fromTo(
-        ".portfolio-item",
-        { opacity: 0, y: 50, scale: 0.9 },
+        ".spotlight-card",
+        { opacity: 0, y: 35 },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          duration: 0.8,
-          stagger: 0.1,
+          duration: 0.7,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: ".portfolio-grid",
-            start: "top bottom-=50",
+            trigger: ".spotlight-card",
+            start: "top bottom-=60",
+            toggleActions: "play none none none",
+          },
+        },
+      );
+
+      gsap.fromTo(
+        ".next-slot-card",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".next-slot-card",
+            start: "top bottom-=40",
             toggleActions: "play none none none",
           },
         },
@@ -95,195 +79,317 @@ export default function Portfolio() {
     { scope: container },
   );
 
-  function openModal(project: Project) {
-    setSelected(project);
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeModal() {
-    setSelected(null);
-    document.body.style.overflow = "";
-  }
-
   return (
-    <>
-      <section
-        id="portfolio"
-        ref={container}
-        className="py-32 px-6 bg-off-white scroll-mt-14"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="portfolio-header text-center mb-16">
-            <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/40 mb-6">
-              Karya Kami
-            </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-charcoal text-balance">
-              Terpilih &{" "}
-              <span className="text-amber-warm italic">Terukur.</span>
-            </h3>
+    <section
+      id="portfolio"
+      ref={container}
+      className="py-16 md:py-24 px-6 bg-off-white scroll-mt-14 overflow-hidden"
+    >
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="portfolio-header text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-charcoal/5 border border-charcoal/5 mb-5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/70">
+              Karya Pilihan Kami · Live Production
+            </span>
           </div>
 
-          <div className="portfolio-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {projects.map((project, i) => (
-              <div
-                key={i}
-                className="portfolio-item group cursor-pointer"
-                onClick={() => openModal(project)}
-                role="button"
-                tabIndex={0}
-                aria-label={`Lihat detail ${project.title}`}
-                onKeyDown={(e) => e.key === "Enter" && openModal(project)}
-              >
-                <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-sm mb-4">
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${project.isPlaceholder ? "grayscale opacity-50" : ""}`}
-                  />
-                  <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/20 transition-colors duration-500" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="bg-charcoal text-off-white text-[10px] font-black uppercase tracking-widest px-5 py-3 rounded-full shadow-xl">
-                      {project.isPlaceholder
-                        ? "Coming Soon"
-                        : "Lihat Detail \u2192"}
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black tracking-tighter text-charcoal text-balance">
+            Karya Pilihan, Hasil{" "}
+            <span className="text-amber-warm italic">Nyata & Teruji.</span>
+          </h3>
+
+          <p className="mt-4 text-xs sm:text-sm text-charcoal/60 max-w-xl mx-auto leading-relaxed">
+            Lihat langsung website produksi yang telah kami bangun dan rilis
+            secara resmi untuk klien kami.
+          </p>
+        </div>
+
+        {/* ── Main Spotlight Showcase Card (PT. Bumi Kutai Perkasa) ── */}
+        <div className="spotlight-card bg-white rounded-md border border-charcoal/10 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 mb-10">
+          {/* Light / White Browser Mockup Header */}
+          <div className="bg-[#fbfbf9] px-4 sm:px-6 py-3 border-b border-charcoal/8 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-1.5 shrink-0">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+            </div>
+
+            <a
+              href="https://www.bumikutaiperkasa.co.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 px-3 sm:px-4 py-1 rounded-sm bg-white border border-charcoal/8 hover:border-amber-warm/60 text-[11px] text-charcoal/70 font-mono transition-all max-w-[240px] sm:max-w-md truncate shadow-2xs"
+              title="Kunjungi website asli di tab baru"
+            >
+              <Globe size={11} className="text-amber-warm shrink-0" />
+              <span className="truncate">https://www.bumikutaiperkasa.co.id</span>
+              <ExternalLink
+                size={11}
+                className="opacity-40 group-hover:opacity-100 group-hover:text-amber-warm shrink-0 transition-opacity ml-auto"
+              />
+            </a>
+
+            <div className="inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60 shrink-0">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="hidden sm:inline">Live Website</span>
+              <span className="sm:hidden">Live</span>
+            </div>
+          </div>
+
+          {/* Full Banner Preview (Proportional 1024x523 HD, Not Cut Off) */}
+          <div className="relative aspect-[1024/523] w-full bg-charcoal/5 overflow-hidden group">
+            <a
+              href="https://www.bumikutaiperkasa.co.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full relative"
+              title="Klik untuk membuka website di tab baru"
+            >
+              <picture>
+                <source srcSet="/portfolio/bumi-kutai-perkasa.webp" type="image/webp" />
+                <img
+                  src="/portfolio/bumi-kutai-perkasa.png"
+                  alt="Website Resmi PT. Bumi Kutai Perkasa - Jual Batu Koral & Split"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                  width={1024}
+                  height={523}
+                />
+              </picture>
+
+              {/* Hover overlay hint */}
+              <div className="absolute inset-0 bg-charcoal/40 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                <span className="inline-flex items-center gap-2 bg-charcoal text-off-white hover:bg-amber-warm hover:text-charcoal px-5 py-3 rounded-sm text-xs font-black uppercase tracking-[0.2em] shadow-2xl transition-colors">
+                  <ExternalLink size={14} />
+                  Buka Website Asli di Tab Baru ↗
+                </span>
+              </div>
+            </a>
+          </div>
+
+          {/* Project Details Section */}
+          <div className="p-6 sm:p-8 md:p-10 border-t border-charcoal/8 bg-white">
+            <div className="grid md:grid-cols-12 gap-8 items-start">
+              {/* Left Column: Description & Specs */}
+              <div className="md:col-span-7 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-amber-warm">
+                      PT / Corporate Profile & Katalog
+                    </span>
+                    <span className="text-charcoal/20">•</span>
+                    <span className="text-[10px] text-charcoal/40 font-mono">
+                      2026
                     </span>
                   </div>
-                </div>
-                <div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-charcoal/40 mb-2 block">
-                    {project.category}
-                  </span>
-                  <h4
-                    className={`text-2xl font-black tracking-tight group-hover:text-amber-warm transition-colors ${project.isPlaceholder ? "text-charcoal/30" : "text-charcoal"}`}
-                  >
-                    {project.title}
+
+                  <h4 className="text-2xl sm:text-3xl font-serif font-black tracking-tight text-charcoal mb-3">
+                    PT. Bumi Kutai Perkasa
                   </h4>
+
+                  <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed mb-6">
+                    Website company profile dan katalog resmi produsen penyedia batu
+                    split, koral, batu pondasi, dan batu agregat base course di
+                    Kutai Kartanegara, Kalimantan Timur. Dibangun dengan
+                    arsitektur modern, responsif di HP, dan terintegrasi
+                    langsung dengan saluran pemesanan WhatsApp.
+                  </p>
+
+                  {/* 4 Metric Badges */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                    <div className="bg-[#fbfbf9] p-3 rounded border border-charcoal/5 text-center">
+                      <div className="flex items-center justify-center gap-1 text-emerald-600 mb-0.5">
+                        <Zap size={13} />
+                        <span className="text-xs font-black font-mono">98/100</span>
+                      </div>
+                      <span className="text-[8px] font-bold uppercase tracking-wider text-charcoal/45 block">
+                        PageSpeed
+                      </span>
+                    </div>
+
+                    <div className="bg-[#fbfbf9] p-3 rounded border border-charcoal/5 text-center">
+                      <div className="flex items-center justify-center gap-1 text-amber-warm mb-0.5">
+                        <ShieldCheck size={13} />
+                        <span className="text-xs font-black">.co.id</span>
+                      </div>
+                      <span className="text-[8px] font-bold uppercase tracking-wider text-charcoal/45 block">
+                        Domain Resmi
+                      </span>
+                    </div>
+
+                    <div className="bg-[#fbfbf9] p-3 rounded border border-charcoal/5 text-center">
+                      <div className="flex items-center justify-center gap-1 text-charcoal mb-0.5">
+                        <TrendingUp size={13} />
+                        <span className="text-xs font-black">Rank #1</span>
+                      </div>
+                      <span className="text-[8px] font-bold uppercase tracking-wider text-charcoal/45 block">
+                        SEO Lokal
+                      </span>
+                    </div>
+
+                    <div className="bg-[#fbfbf9] p-3 rounded border border-charcoal/5 text-center">
+                      <div className="flex items-center justify-center gap-1 text-charcoal mb-0.5">
+                        <Clock size={13} />
+                        <span className="text-xs font-black font-mono">&lt;0.8s</span>
+                      </div>
+                      <span className="text-[8px] font-bold uppercase tracking-wider text-charcoal/45 block">
+                        Waktu Muat
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Key Highlights */}
+                  <div className="space-y-2 mb-6">
+                    <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/30">
+                      Fitur & Solusi
+                    </p>
+                    {[
+                      "Profil legalitas dan armada dump truck terverifikasi",
+                      "Katalog spesifikasi lengkap batu split & agregat",
+                      "Tombol pemesanan cepat langsung ke WhatsApp Sales",
+                      "Skema SEO Google Search Console & Schema.org",
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
+                        <CheckCircle2
+                          size={13}
+                          className="text-amber-warm shrink-0 mt-0.5"
+                        />
+                        <span className="text-xs text-charcoal/80 leading-snug">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="pt-4 border-t border-charcoal/8 flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://www.bumikutaiperkasa.co.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-3.5 px-5 bg-charcoal text-off-white hover:bg-amber-warm hover:text-charcoal text-xs font-black uppercase tracking-[0.15em] rounded-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-sm"
+                  >
+                    <ExternalLink size={14} />
+                    Buka Website Asli ↗
+                  </a>
+
+                  <a
+                    href={getWhatsAppUrl(
+                      "Halo Altareka, saya melihat website PT. Bumi Kutai Perkasa dan tertarik untuk membuat website serupa untuk bisnis saya. Bisa konsultasi?",
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3.5 px-5 border border-charcoal/30 hover:border-charcoal text-charcoal hover:bg-charcoal hover:text-off-white text-xs font-black uppercase tracking-[0.15em] rounded-sm flex items-center justify-center gap-2 transition-all duration-300"
+                  >
+                    <MessageCircle size={14} />
+                    Pesan Serupa
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {selected && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
-          onClick={closeModal}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Detail project ${selected.title}`}
-        >
-          <div className="absolute inset-0 bg-charcoal/80 backdrop-blur-sm" />
-
-          <div
-            className="relative z-10 bg-off-white rounded-sm max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="aspect-[16/9] overflow-hidden">
-              <img
-                src={selected.img}
-                alt={selected.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 bg-charcoal text-off-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-warm hover:text-charcoal transition-colors shadow-lg"
-              aria-label="Tutup modal"
-            >
-              <X size={16} />
-            </button>
-
-            <div className="p-8 md:p-12">
-              {selected.isPlaceholder ? (
-                <div className="text-center py-8">
-                  <p className="text-xs font-black uppercase tracking-[0.4em] text-charcoal/30 mb-4">
-                    Coming Soon
+              {/* Right Column: Tech Stack & Testimonial */}
+              <div className="md:col-span-5 flex flex-col justify-between h-full space-y-6">
+                {/* Tech Stack */}
+                <div className="bg-[#fbfbf9] p-5 rounded-sm border border-charcoal/5">
+                  <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/40 mb-3">
+                    Tech Stack
                   </p>
-                  <h4 className="text-3xl font-serif font-black text-charcoal">
-                    Project Berikutnya
-                  </h4>
-                  <p className="mt-4 text-sm text-charcoal/50">
-                    Kami sedang mengerjakan project baru yang menakjubkan.
-                    Pantau terus!
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      "Next.js 15",
+                      "Tailwind CSS",
+                      "TypeScript",
+                      "Vercel Edge",
+                      "JSON-LD Schema",
+                    ].map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-[9px] font-bold uppercase tracking-wider bg-white text-charcoal/80 border border-charcoal/10 px-2.5 py-1 rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Testimonial */}
+                <div className="bg-[#fbfbf9] p-5 rounded-sm border border-charcoal/5 border-l-2 border-l-amber-warm">
+                  <Quote className="w-5 h-5 text-amber-warm mb-2 opacity-70" />
+                  <p className="text-xs italic text-charcoal/80 leading-relaxed mb-3">
+                    &ldquo;Website tampil sangat profesional dan kredibel di
+                    mata rekanan proyek B2B. Membantu kami memvalidasi perizinan
+                    dan mempercepat order batu split se-Kaltim.&rdquo;
+                  </p>
+                  <p className="text-[10px] font-black uppercase tracking-wider text-charcoal">
+                    — Manajemen PT. Bumi Kutai Perkasa
+                  </p>
+                  <p className="text-[9px] text-charcoal/40">
+                    Kutai Kartanegara, Kaltim
                   </p>
                 </div>
-              ) : (
-                <>
-                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-amber-warm mb-3 block">
-                    {selected.category}
-                  </span>
-                  <h4 className="text-3xl md:text-4xl font-serif font-black text-charcoal tracking-tight mb-6">
-                    {selected.title}
-                  </h4>
 
-                  {selected.description && (
-                    <p className="text-sm leading-relaxed text-charcoal/70 mb-8">
-                      {selected.description}
-                    </p>
-                  )}
-
-                  {selected.techStack && selected.techStack.length > 0 && (
-                    <div className="mb-8">
-                      <p className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/30 mb-3">
-                        Tech Stack
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {selected.techStack.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="text-[10px] font-black uppercase tracking-widest bg-charcoal text-off-white px-4 py-2 rounded-full"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {selected.testimonial && (
-                    <div className="bg-charcoal/5 rounded-sm p-6 mb-8 relative">
-                      <Quote className="w-8 h-8 text-amber-warm mb-3 opacity-60" />
-                      <p className="text-sm italic text-charcoal/70 leading-relaxed mb-3">
-                        &ldquo;{selected.testimonial.text}&rdquo;
-                      </p>
-                      <p className="text-[10px] font-black uppercase tracking-widest text-charcoal/40">
-                        — {selected.testimonial.author}
-                      </p>
-                    </div>
-                  )}
-
-                  <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-                    {selected.liveUrl && (
-                      <a
-                        href={selected.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-3 bg-charcoal text-off-white text-xs font-black uppercase tracking-[0.2em] px-8 py-5 rounded-sm hover:bg-amber-warm hover:text-charcoal transition-colors duration-300"
-                      >
-                        <ExternalLink size={16} />
-                        Kunjungi Website
-                      </a>
-                    )}
-                    <a
-                      href={getWhatsAppUrl(
-                        `Halo Novareka, saya melihat portofolio Anda (${selected.title}) dan tertarik untuk membuat website serupa. Bisa mulai konsultasi?`,
-                      )}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-3 border-2 border-charcoal text-charcoal text-xs font-black uppercase tracking-[0.2em] px-8 py-5 rounded-sm hover:bg-charcoal hover:text-off-white transition-colors duration-300"
-                    >
-                      <MessageCircle size={16} />
-                      Pesan Serupa
-                    </a>
-                  </div>
-                </>
-              )}
+                {/* Quick note */}
+                <div className="p-4 bg-emerald-50/50 rounded-sm border border-emerald-100/80">
+                  <p className="text-[11px] text-emerald-900/80 leading-relaxed font-medium">
+                    ✓ Garansi performa & keamanan SSL aktif penuh di lingkungan
+                    produksi.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      )}
-    </>
+
+        {/* ── Next Slot Invitation Card ── */}
+        <div className="next-slot-card bg-charcoal text-off-white rounded-md p-6 sm:p-8 md:p-10 border border-charcoal shadow-xl max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-warm/15 text-amber-warm text-[10px] font-black uppercase tracking-widest mb-3">
+                <Sparkles size={11} />
+                Slot Pengerjaan Terbuka Bulan Ini
+              </div>
+
+              <h4 className="text-xl sm:text-2xl font-serif font-black tracking-tight text-off-white mb-2">
+                Jadilah Mitra Digital Kami{" "}
+                <span className="text-amber-warm italic">Berikutnya.</span>
+              </h4>
+
+              <p className="text-xs text-off-white/70 leading-relaxed max-w-xl">
+                Butuh website untuk <strong>Portofolio</strong>,{" "}
+                <strong>Katalog UMKM</strong>, atau{" "}
+                <strong>Company Profile PT</strong>? Dapatkan pendampingan
+                langsung 1-on-1, domain .my.id gratis, dan jaminan kecepatan
+                loading.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto">
+              <a
+                href={getWhatsAppUrl(
+                  "Halo Altareka, saya tertarik untuk memesan pembuatan website dan ingin berkonsultasi mengenai slot pengerjaan.",
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-3.5 px-6 bg-amber-warm text-charcoal hover:bg-off-white text-xs font-black uppercase tracking-[0.15em] rounded-sm flex items-center justify-center gap-2 transition-all duration-300 shadow-md"
+              >
+                <MessageCircle size={15} />
+                Klaim Slot Sekarang
+                <ArrowRight size={13} />
+              </a>
+
+              <a
+                href="#pricing"
+                className="py-3.5 px-5 bg-white/5 hover:bg-white/10 text-off-white/80 hover:text-off-white text-xs font-bold uppercase tracking-wider rounded-sm text-center transition-colors border border-white/5"
+              >
+                Lihat Harga →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

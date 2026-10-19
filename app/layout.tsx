@@ -21,14 +21,14 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Novareka — Jasa Website Premium & Solusi Digital",
-    template: "%s | Novareka",
+    default: "Altareka — Jasa Website Premium & Solusi Digital",
+    template: "%s | Altareka",
   },
   description:
-    "Novareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
+    "Altareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
   keywords: [
-    "novareka",
-    "novareka.com",
+    "altareka",
+    "altareka.com",
     "jasa website tenggarong",
     "jasa website samarinda",
     "jasa website balikpapan",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Luvi Aprilyansyah Gabriel" }],
   creator: "Luvi Aprilyansyah Gabriel",
-  publisher: "Novareka",
+  publisher: "Altareka",
   formatDetection: {
     email: false,
     address: true,
@@ -66,17 +66,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Novareka — Jasa Website Premium & Solusi Digital",
+    title: "Altareka — Jasa Website Premium & Solusi Digital",
     description:
-      "Novareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
+      "Altareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
     url: SITE_URL,
-    siteName: "Novareka",
+    siteName: "Altareka",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Novareka — Jasa Website Premium & Solusi Digital",
+        alt: "Altareka — Jasa Website Premium & Solusi Digital",
       },
     ],
     locale: "id_ID",
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Novareka — Jasa Website Premium & Solusi Digital",
+    title: "Altareka — Jasa Website Premium & Solusi Digital",
     description:
-      "Novareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
+      "Altareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
     images: ["/opengraph-image"],
   },
   icons: {

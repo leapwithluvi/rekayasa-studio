@@ -42,10 +42,10 @@ export default function CTASection() {
   }, { scope: container });
 
   return (
-    <section id="contact" ref={container} className="py-32 px-6 scroll-mt-14">
+    <section id="contact" ref={container} className="py-16 md:py-24 px-6 scroll-mt-14">
       <div 
         ref={cardRef}
-        className="max-w-7xl mx-auto bg-charcoal rounded-sm p-8 md:p-32 text-center relative overflow-hidden"
+        className="max-w-7xl mx-auto bg-charcoal rounded-sm p-8 md:p-20 lg:p-24 text-center relative overflow-hidden"
       >
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-amber-warm/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -62,7 +62,7 @@ export default function CTASection() {
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <Link 
-              href={getWhatsAppUrl("Halo Novareka, saya ingin mendiskusikan rencana pembuatan website untuk bisnis saya.")}
+              href={getWhatsAppUrl("Halo Altareka, saya ingin mendiskusikan rencana pembuatan website untuk bisnis saya.")}
               target="_blank"
               rel="noopener noreferrer"
               className="group w-full md:w-auto bg-amber-warm text-charcoal px-12 py-6 text-sm font-black uppercase tracking-[0.2em] rounded-sm hover:bg-off-white transition-all duration-500 shadow-2xl flex items-center justify-center gap-4"
