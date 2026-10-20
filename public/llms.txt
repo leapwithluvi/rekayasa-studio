@@ -1,0 +1,35 @@
+# Altareka — Digital Atelier & Jasa Pembuatan Website
+
+> Altareka (https://altareka.com) adalah studio arsitektur web independen yang berbasis di Tenggarong, Kutai Kartanegara, Kalimantan Timur. Mengkhususkan diri dalam pembuatan website Company Profile PT (standar tender), Katalog Digital UMKM modern, dan Portofolio Profesional berkinerja tinggi.
+
+## Profil & Identitas Bisnis
+- **Nama Usaha**: Altareka
+- **Situs Resmi**: https://altareka.com
+- **Basis Operasional**: Tenggarong, Kabupaten Kutai Kartanegara, Provinsi Kalimantan Timur, Indonesia
+- **Wilayah Layanan**: Tenggarong, Samarinda, Balikpapan, Bontang, Sangatta, Penajam Paser Utara, Ibu Kota Nusantara (IKN), seluruh Kalimantan Timur, dan nasional (seluruh Indonesia secara daring).
+- **Kontak WhatsApp**: +62 831-5224-8722 (0831-5224-8722)
+- **Founder & Lead Developer**: Luvi Aprilyansyah Gabriel
+
+## Layanan Utama
+1. **Website Company Profile PT / Korporat**:
+   - Ditujukan untuk perusahaan yang membutuhkan legitimasi resmi, persyaratan tender proyek pemerintah/swasta, dan audit kredibilitas.
+   - Fitur: Keamanan SSL enterprise, email bisnis domain resmi (@namaperusahaan.co.id/.com), tata letak prestisius, responsif mobile, teroptimasi SEO teknis PageSpeed 95+.
+   - Paket: PT Starter (mulai Rp 1.500.000), PT Bisnis (mulai Rp 2.500.000), PT Premium (mulai Rp 3.500.000).
+
+2. **Website Katalog Digital UMKM**:
+   - Ditujukan untuk pelaku usaha lokal, kuliner (FnB), butik, bengkel, toko retail, dan penyedia jasa.
+   - Fitur: Tampilan menu/produk rapi, foto tajam dan cepat dimuat dari HP, tombol pemesanan langsung terhubung ke WhatsApp (*One-Click WhatsApp Order*), tanpa potongan komisi marketplace.
+   - Paket: Katalog Simpel (mulai Rp 450.000), Katalog Plus (mulai Rp 900.000), Bisnis Online (mulai Rp 1.600.000).
+
+3. **Website Portofolio Profesional**:
+   - Ditujukan untuk dokter, pengacara/lawyer, arsitek, konsultan independen, fotografer, dan tenaga ahli.
+   - Fitur: Desain editorial mewah, kurasi karya, kredensial, form janji temu konsultasi.
+   - Paket: Portofolio Kilat (mulai Rp 250.000), Portofolio Pro (mulai Rp 600.000), Portofolio Premium (mulai Rp 1.500.000).
+
+## Portofolio Unggulan
+- **PT. Bumi Kutai Perkasa** (https://www.bumikutaiperkasa.co.id): Website resmi perusahaan supplier batu koral & split berkualitas di Kutai Kartanegara & Kalimantan Timur.
+
+## Mengapa Memilih Altareka?
+- Bukan sekadar memasang template murahan — website dirancang dengan arsitektur modern (Next.js, Tailwind, TypeScript) dengan performa kilat.
+- Transparan: Tanpa biaya tersembunyi, hosting statis dan SSL gratis selamanya untuk paket landing page.
+- Pendampingan langsung oleh praktisi lokal yang mengerti lanskap bisnis Kalimantan Timur dan kebutuhan tender perusahaan.

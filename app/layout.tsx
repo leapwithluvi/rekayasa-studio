@@ -21,31 +21,42 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Altareka — Jasa Website Premium & Solusi Digital",
+    default: "Altareka — Jasa Website Tenggarong, Kukar & Solusi Web Kaltim",
     template: "%s | Altareka",
   },
   description:
-    "Altareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
+    "Jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara (Kukar), Samarinda, dan Kalimantan Timur. Spesialis Company Profile PT siap tender, Katalog UMKM & Portofolio modern berkecepatan tinggi.",
   keywords: [
     "altareka",
     "altareka.com",
     "jasa website tenggarong",
+    "jasa pembuatan website tenggarong",
+    "jasa website kukar",
+    "jasa website kutai kartanegara",
     "jasa website samarinda",
     "jasa website balikpapan",
     "jasa website bontang",
     "jasa website sangatta",
     "jasa website penajam",
     "jasa website kaltim",
-    "jasa website kukar",
-    "jasa website kutai kartanegara",
+    "jasa website kalimantan timur",
+    "jasa website ikn",
+    "jasa website nusantara",
+    "web developer tenggarong",
+    "web developer kalimantan timur",
+    "bikin website kukar",
+    "jasa company profile pt",
+    "jasa pembuatan website pt",
+    "jasa website katalog umkm",
     "jasa pembuatan website profesional",
     "jasa landing page murah",
     "jasa web design kaltim",
-    "web developer kalimantan timur",
   ],
   authors: [{ name: "Luvi Aprilyansyah Gabriel" }],
   creator: "Luvi Aprilyansyah Gabriel",
   publisher: "Altareka",
+  category: "technology",
+  classification: "Jasa Pembuatan Website & Pengembangan Perangkat Lunak",
   formatDetection: {
     email: false,
     address: true,
@@ -53,6 +64,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification",
   },
   robots: {
     index: true,
@@ -66,9 +80,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Altareka — Jasa Website Premium & Solusi Digital",
+    title: "Altareka — Jasa Website Tenggarong, Kukar & Solusi Web Kaltim",
     description:
-      "Altareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
+      "Jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara (Kukar), Samarinda, dan Kalimantan Timur. Spesialis Company Profile PT siap tender, Katalog UMKM & Portofolio modern.",
     url: SITE_URL,
     siteName: "Altareka",
     images: [
@@ -76,7 +90,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Altareka — Jasa Website Premium & Solusi Digital",
+        alt: "Altareka — Jasa Website Tenggarong, Kukar & Solusi Web Kaltim",
       },
     ],
     locale: "id_ID",
@@ -84,9 +98,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Altareka — Jasa Website Premium & Solusi Digital",
+    title: "Altareka — Jasa Website Tenggarong, Kukar & Solusi Web Kaltim",
     description:
-      "Altareka menghadirkan jasa website premium, company profile, landing page, dan solusi software modern dengan performa tinggi dan desain berkelas dunia.",
+      "Jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara (Kukar), Samarinda, dan Kalimantan Timur. Spesialis Company Profile PT siap tender, Katalog UMKM & Portofolio modern.",
     images: ["/opengraph-image"],
   },
   icons: {

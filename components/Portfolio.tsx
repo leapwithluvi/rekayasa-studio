@@ -151,7 +151,7 @@ export default function Portfolio() {
                 <source srcSet="/portfolio/bumi-kutai-perkasa.webp" type="image/webp" />
                 <img
                   src="/portfolio/bumi-kutai-perkasa.png"
-                  alt="Website Resmi PT. Bumi Kutai Perkasa - Jual Batu Koral & Split"
+                  alt="Website Resmi PT. Bumi Kutai Perkasa oleh Altareka - Jasa Website Tenggarong, Kukar & Kaltim"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
                   loading="lazy"
                   width={1024}

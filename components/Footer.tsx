@@ -310,10 +310,13 @@ export default function Footer() {
 
             <div className="mt-8 pt-6 border-t border-white/[0.06]">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">
-                Lokasi Kantor
+                Basis &amp; Wilayah Layanan
               </p>
-              <p className="text-xs text-white/70 leading-relaxed">
-                Indonesia — Melayani Seluruh Kota &amp; Klien Internasional
+              <p className="text-xs text-white/80 font-medium leading-relaxed mb-1.5">
+                Tenggarong, Kutai Kartanegara, Kalimantan Timur
+              </p>
+              <p className="text-[11px] text-white/45 leading-relaxed">
+                Melayani: Tenggarong · Kukar · Samarinda · Balikpapan · IKN Nusantara · Seluruh Indonesia
               </p>
             </div>
           </div>
