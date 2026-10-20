@@ -27,29 +27,28 @@ export default function Hero() {
   const container = useRef(null);
 
   useGSAP(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
+    // H1 remains visible immediately for instant LCP, only subtle motion
     tl.from(".hero-title", {
-      y: 100,
-      opacity: 0,
-      duration: 1.2,
-      delay: 0.2,
+      y: 20,
+      duration: 0.6,
     })
     .from(".hero-description", {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-    }, "-=0.8")
-    .from(".hero-cta", {
       y: 20,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-    }, "-=0.6")
+      opacity: 0.3,
+      duration: 0.6,
+    }, "-=0.3")
+    .from(".hero-cta", {
+      y: 15,
+      opacity: 0.3,
+      duration: 0.5,
+      stagger: 0.1,
+    }, "-=0.3")
     .from(".hero-social", {
-      opacity: 0,
-      duration: 1.5,
-    }, "-=0.4");
+      opacity: 0.4,
+      duration: 0.8,
+    }, "-=0.2");
   }, { scope: container });
 
   return (
@@ -62,7 +61,7 @@ export default function Hero() {
           Jasa Website <span className="italic text-amber-warm underline underline-offset-8 decoration-1 decoration-amber-warm/30">Premium</span> <br className="hidden sm:block" /> untuk Elevasi Bisnis.
         </h1>
 
-        <p className="hero-description max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-charcoal/65 leading-relaxed font-medium mb-12 text-balance">
+        <p className="hero-description max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-charcoal/75 leading-relaxed font-medium mb-12 text-balance">
           Altareka merancang website berstandar enterprise untuk <strong className="text-charcoal font-bold">Company Profile PT</strong>, <strong className="text-charcoal font-bold">Katalog UMKM</strong>, dan <strong className="text-charcoal font-bold">Portofolio Profesional</strong> — elegan, secepat kilat, dan siap menghasilkan konversi bisnis nyata.
         </p>
 
@@ -86,7 +85,7 @@ export default function Hero() {
 
         {/* Tech Marquee */}
         <div className="hero-social mt-20 pt-16 border-t border-charcoal/5 flex flex-col items-center gap-6 overflow-hidden">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-charcoal/40">Teknologi yang Kami Gunakan</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-charcoal/70">Teknologi yang Kami Gunakan</span>
 
           <div className="relative w-full">
             {/* Fade edges */}
@@ -104,10 +103,10 @@ export default function Hero() {
                   key={i}
                   className="flex items-center gap-8 md:gap-12 shrink-0 group"
                 >
-                  <span className="font-serif font-bold text-base md:text-lg tracking-wider text-charcoal/35 group-hover:text-charcoal transition-colors duration-300 uppercase whitespace-nowrap cursor-default">
+                  <span className="font-serif font-bold text-base md:text-lg tracking-wider text-charcoal/65 group-hover:text-charcoal transition-colors duration-300 uppercase whitespace-nowrap cursor-default">
                     {tech}
                   </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-charcoal/20 group-hover:bg-amber-warm transition-colors duration-300 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-charcoal/30 group-hover:bg-amber-warm transition-colors duration-300 shrink-0" />
                 </div>
               ))}
             </div>

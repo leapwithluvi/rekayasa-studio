@@ -499,8 +499,6 @@ export default function Pricing() {
 
   useGSAP(
     () => {
-      ScrollTrigger.refresh();
-
       gsap.fromTo(
         ".pricing-header",
         { opacity: 0, y: 20 },
@@ -548,14 +546,14 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto">
         {/* ── Header ── */}
         <div className="pricing-header text-center mb-12">
-          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/40 mb-6">
+          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/70 mb-6">
             Investasi Digital
           </h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-charcoal text-balance">
             Harga Jujur, Hasil{" "}
             <span className="text-amber-warm italic">Luhur.</span>
           </h3>
-          <p className="mt-4 text-xs sm:text-sm text-charcoal/50 max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-xs sm:text-sm text-charcoal/75 max-w-xl mx-auto leading-relaxed">
             Pilih kategori yang sesuai kebutuhan Anda. Semua paket sudah
             termasuk domain .my.id gratis, SSL, dan support teknis.
           </p>
@@ -572,7 +570,7 @@ export default function Pricing() {
                   "flex items-center gap-2 px-5 sm:px-6 py-3 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm transition-all duration-300",
                   activeTab === cat.key
                     ? "bg-charcoal text-off-white shadow-lg shadow-charcoal/20"
-                    : "text-charcoal/40 hover:text-charcoal hover:bg-charcoal/5",
+                    : "text-charcoal/70 hover:text-charcoal hover:bg-charcoal/5",
                 )}
               >
                 {cat.icon}
@@ -619,7 +617,7 @@ export default function Pricing() {
                     <span
                       className={cn(
                         "text-[10px] font-black uppercase tracking-[0.3em]",
-                        plan.featured ? "text-amber-warm" : "text-charcoal/40",
+                        plan.featured ? "text-amber-warm" : "text-charcoal/70",
                       )}
                     >
                       {plan.name}
@@ -638,7 +636,7 @@ export default function Pricing() {
                     <p
                       className={cn(
                         "mt-3 text-xs leading-relaxed max-w-[240px] mx-auto min-h-[36px] flex items-center justify-center text-center",
-                        plan.featured ? "text-off-white/60" : "text-charcoal/50",
+                        plan.featured ? "text-off-white/80" : "text-charcoal/75",
                       )}
                     >
                       {plan.desc}
@@ -661,8 +659,8 @@ export default function Pricing() {
                         className={cn(
                           "flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider",
                           plan.featured
-                            ? "text-off-white/50"
-                            : "text-charcoal/45",
+                            ? "text-off-white/80"
+                            : "text-charcoal/75",
                         )}
                       >
                         {spec.icon}
@@ -678,8 +676,8 @@ export default function Pricing() {
                         className={cn(
                           "flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider",
                           plan.featured
-                            ? "text-off-white/50"
-                            : "text-charcoal/45",
+                            ? "text-off-white/80"
+                            : "text-charcoal/75",
                         )}
                       >
                         {spec.icon}
@@ -737,8 +735,8 @@ export default function Pricing() {
                         className={cn(
                           "text-[9px] font-black uppercase tracking-[0.3em] mb-2.5",
                           plan.featured
-                            ? "text-off-white/30"
-                            : "text-charcoal/30",
+                            ? "text-off-white/70"
+                            : "text-charcoal/70",
                         )}
                       >
                         Tidak Termasuk
@@ -760,8 +758,8 @@ export default function Pricing() {
                               className={cn(
                                 "text-xs font-medium tracking-tight leading-relaxed",
                                 plan.featured
-                                  ? "text-off-white/40"
-                                  : "text-charcoal/40",
+                                  ? "text-off-white/80"
+                                  : "text-charcoal/75",
                               )}
                             >
                               {item}
@@ -780,7 +778,7 @@ export default function Pricing() {
                         "flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest mb-4 mt-1 transition-colors",
                         plan.featured
                           ? "text-amber-warm hover:text-off-white"
-                          : "text-charcoal/40 hover:text-charcoal",
+                          : "text-charcoal/75 hover:text-charcoal",
                       )}
                       aria-expanded={isExpanded}
                     >
@@ -829,7 +827,7 @@ export default function Pricing() {
                 Custom — Multi bahasa, login klien, katalog besar, atau toko
                 online.
               </p>
-              <p className="text-xs text-charcoal/40 mt-1">
+              <p className="text-xs text-charcoal/75 mt-1">
                 Harga setelah konsultasi. Hubungi kami untuk diskusi kebutuhan
                 Anda.
               </p>
@@ -856,17 +854,17 @@ export default function Pricing() {
             aria-expanded={rulesOpen}
           >
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/40">
+              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/70">
                 Ketentuan Umum
               </p>
-              <p className="text-xs text-charcoal/30 mt-1">
+              <p className="text-xs text-charcoal/70 mt-1">
                 Berlaku untuk semua paket di semua kategori
               </p>
             </div>
             <ChevronDown
               size={18}
               className={cn(
-                "text-charcoal/30 transition-transform duration-300 shrink-0",
+                "text-charcoal/60 transition-transform duration-300 shrink-0",
                 rulesOpen && "rotate-180",
               )}
             />
@@ -884,7 +882,7 @@ export default function Pricing() {
                     <div className="mt-0.5 w-8 h-8 rounded-full bg-amber-warm/10 flex items-center justify-center shrink-0 text-amber-warm">
                       {rule.icon}
                     </div>
-                    <p className="text-xs text-charcoal/60 leading-relaxed">
+                    <p className="text-xs text-charcoal/75 leading-relaxed">
                       {rule.text}
                     </p>
                   </div>
@@ -893,7 +891,7 @@ export default function Pricing() {
 
               {/* Shared exclusions */}
               <div>
-                <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/25 mb-4">
+                <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/70 mb-4">
                   Tidak Termasuk di Semua Paket
                 </p>
                 <div className="grid sm:grid-cols-2 gap-3">
@@ -905,7 +903,7 @@ export default function Pricing() {
                       <div className="w-6 h-6 rounded-full bg-red-500/5 flex items-center justify-center shrink-0">
                         <X className="w-3 h-3 text-red-400" />
                       </div>
-                      <span className="text-[11px] font-bold uppercase tracking-tight text-charcoal/35">
+                      <span className="text-[11px] font-bold uppercase tracking-tight text-charcoal/75">
                         {item.text}
                       </span>
                     </div>
@@ -918,7 +916,7 @@ export default function Pricing() {
 
         {/* ── Bottom note ── */}
         <div className="mt-16 text-center">
-          <p className="text-[10px] font-bold text-charcoal/30 uppercase tracking-[0.3em] leading-relaxed">
+          <p className="text-[10px] font-bold text-charcoal/70 uppercase tracking-[0.3em] leading-relaxed">
             *Semua harga mulai dari, dapat disesuaikan dengan kebutuhan.{" "}
             <br className="md:hidden" />
             <Link

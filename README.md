@@ -276,7 +276,7 @@ Platform ini dirancang siap pakai (_zero-configuration_) pada Vercel:
 1. Hubungkan akun GitHub Anda ke [Vercel Dashboard](https://vercel.com).
 2. Pilih repositori `rekayasa-studio`.
 3. Tambahkan environment variable:
-   - `NEXT_PUBLIC_SITE_URL` = `https://altareka.com` (atau domain produksi Anda).
+   - `NEXT_PUBLIC_SITE_URL` = `https://altareka.web.id` (atau domain produksi Anda).
 4. Klik **Deploy**. Vercel akan otomatis mengompilasi dan mengaktifkan jaringan Edge Global CDN.
 
 ### B. Deploy Mandiri (VPS / Docker / Linux Server)
@@ -302,7 +302,7 @@ Platform ini dirancang siap pakai (_zero-configuration_) pada Vercel:
    ```nginx
    server {
        listen 80;
-       server_name altareka.com www.altareka.com;
+       server_name altareka.web.id www.altareka.web.id;
 
        location / {
            proxy_pass http://127.0.0.1:3000;

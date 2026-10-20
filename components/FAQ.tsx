@@ -42,11 +42,6 @@ export default function FAQ() {
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useGSAP(() => {
-    // Memastikan posisi dihitung ulang setelah DOM siap
-    const timer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 50);
-
     // Header reveal
     gsap.fromTo(".faq-header", 
       { opacity: 0, y: 20 },
@@ -77,8 +72,6 @@ export default function FAQ() {
         }
       }
     );
-
-    return () => clearTimeout(timer);
   }, { scope: container });
 
   useGSAP(() => {
@@ -99,7 +92,7 @@ export default function FAQ() {
     <section id="faq" ref={container} className="py-16 md:py-24 px-6 bg-off-white overflow-hidden scroll-mt-14">
       <div className="max-w-4xl mx-auto">
         <div className="faq-header text-center mb-12 md:mb-16 border-t border-charcoal/5 pt-8 md:pt-12">
-          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/40 mb-6 md:8 text-balance">Pusat Informasi</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/70 mb-6 md:8 text-balance">Pusat Informasi</h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-charcoal text-balance">
             Pertanyaan <span className="text-amber-warm italic">Umum.</span>
           </h3>
@@ -137,7 +130,7 @@ export default function FAQ() {
                 className="overflow-hidden"
                 style={{ height: i === 0 ? "auto" : 0, opacity: i === 0 ? 1 : 0 }}
               >
-                <p className="text-charcoal/60 text-base md:text-lg leading-relaxed font-medium pb-8 max-w-3xl">
+                <p className="text-charcoal/75 text-base md:text-lg leading-relaxed font-medium pb-8 max-w-3xl">
                   {faq.a}
                 </p>
               </div>

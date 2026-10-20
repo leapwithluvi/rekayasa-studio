@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara (Kukar), Samarinda, dan Kalimantan Timur. Spesialis Company Profile PT siap tender, Katalog UMKM & Portofolio modern berkecepatan tinggi.",
   keywords: [
     "altareka",
-    "altareka.com",
+    "altareka.web.id",
     "jasa website tenggarong",
     "jasa pembuatan website tenggarong",
     "jasa website kukar",

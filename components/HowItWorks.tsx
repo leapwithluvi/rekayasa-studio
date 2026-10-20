@@ -34,11 +34,6 @@ export default function HowItWorks() {
   const container = useRef(null);
 
   useGSAP(() => {
-    // Refresh koordinat lebih cepat
-    const timer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 50);
-
     // Header - Snappy
     gsap.fromTo(".how-header", 
       { opacity: 0, y: 20 },
@@ -48,7 +43,7 @@ export default function HowItWorks() {
         duration: 0.5,
         scrollTrigger: {
           trigger: container.current,
-          start: "top 95%", // Langsung pemicu begitu terlihat
+          start: "top 95%",
           toggleActions: "play none none none",
           once: true,
         }
@@ -62,7 +57,7 @@ export default function HowItWorks() {
         opacity: 1, 
         y: 0, 
         duration: 0.4,
-        stagger: 0.05, // Jeda sangat tipis agar terasa responsif
+        stagger: 0.05,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".steps-grid",
@@ -72,15 +67,13 @@ export default function HowItWorks() {
         }
       }
     );
-
-    return () => clearTimeout(timer);
   }, { scope: container });
 
   return (
     <section id="how-it-works" ref={container} className="py-16 md:py-24 px-6 bg-off-white overflow-hidden scroll-mt-14">
       <div className="max-w-7xl mx-auto">
         <div className="how-header text-center mb-12 md:mb-16">
-          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/40 mb-8 font-sans text-balance">Proses Kerja</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-charcoal/70 mb-8 font-sans text-balance">Proses Kerja</h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-charcoal text-balance px-4">
             Langkah Menuju <span className="italic">Kesuksesan.</span>
           </h3>
@@ -97,7 +90,7 @@ export default function HowItWorks() {
               </div>
               <div className="relative z-10">
                 <h4 className="text-2xl font-black text-charcoal mb-6 tracking-tight">{step.title}</h4>
-                <p className="text-charcoal/50 text-sm leading-loose font-medium">
+                <p className="text-charcoal/75 text-sm leading-loose font-medium">
                   {step.desc}
                 </p>
               </div>

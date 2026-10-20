@@ -30,14 +30,12 @@ export default function Testimonials() {
   const container = useRef(null);
 
   useGSAP(() => {
-    ScrollTrigger.refresh();
-
     gsap.fromTo(".testi-header", 
       { opacity: 0, y: 30 },
       { 
         opacity: 1, 
         y: 0, 
-        duration: 1,
+        duration: 0.8,
         scrollTrigger: {
           trigger: container.current,
           start: "top bottom-=100",
@@ -47,13 +45,13 @@ export default function Testimonials() {
     );
 
     gsap.fromTo(".testi-card", 
-      { opacity: 0, scale: 0.9, y: 50 },
+      { opacity: 0, scale: 0.95, y: 30 },
       { 
         opacity: 1, 
         scale: 1, 
         y: 0, 
-        duration: 0.7,
-        stagger: 0.15,
+        duration: 0.6,
+        stagger: 0.12,
         scrollTrigger: {
           trigger: ".testi-grid",
           start: "top bottom-=50",
@@ -67,7 +65,7 @@ export default function Testimonials() {
     <section id="testimonials" ref={container} className="py-16 md:py-24 px-6 bg-charcoal overflow-hidden scroll-mt-14">
       <div className="max-w-7xl mx-auto">
         <div className="testi-header text-center mb-12 md:mb-16">
-          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-amber-warm/60 mb-6 md:8">Testimoni</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-amber-warm mb-6 md:8">Testimoni</h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter text-off-white text-balance">
             Mereka yang Berhasil <br className="hidden sm:block" /><span className="text-amber-warm italic">Tampil Beda.</span>
           </h3>
@@ -82,7 +80,7 @@ export default function Testimonials() {
               <div className="text-amber-warm/20 absolute top-6 right-6 md:top-10 md:right-10 group-hover:text-amber-warm transition-colors duration-500">
                 <Quote size={32} className="md:w-10 md:h-10" />
               </div>
-              <p className="text-off-white/70 text-lg leading-relaxed font-medium mb-12 relative z-10">
+              <p className="text-off-white/80 text-lg leading-relaxed font-medium mb-12 relative z-10">
                 "{testi.content}"
               </p>
               <div className="flex items-center gap-4">
@@ -91,7 +89,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <h4 className="text-off-white font-black tracking-tight">{testi.name}</h4>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-off-white/40">{testi.role}</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-off-white/70">{testi.role}</span>
                 </div>
               </div>
             </div>

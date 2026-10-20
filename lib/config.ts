@@ -1,11 +1,11 @@
 /**
  * Satu sumber kebenaran untuk URL situs.
  * Set NEXT_PUBLIC_SITE_URL di .env untuk mengubah URL secara dinamis.
- * Fallback ke altareka.com jika env tidak diset.
+ * Fallback ke altareka.web.id jika env tidak diset.
  */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://altareka.com";
+  "https://altareka.web.id";
 
 export const WA_PHONE = "6283152248722";
 

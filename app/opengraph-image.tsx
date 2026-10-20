@@ -29,23 +29,23 @@ export default async function Image() {
         }}
       >
         {/* Decorative Grid Pattern Influence */}
-        <div 
-            style={{
-                position: 'absolute',
-                inset: 0,
-                opacity: 0.1,
-                backgroundImage: 'radial-gradient(#0d0d0c 1px, transparent 1px)',
-                backgroundSize: '40px 40px'
-            }}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            opacity: 0.1,
+            backgroundImage: 'radial-gradient(#0d0d0c 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }}
         />
 
         {/* Brand Accent Bar */}
         <div style={{
-            width: 80,
-            height: 8,
-            backgroundColor: '#c8a96e',
-            marginBottom: 40,
-            borderRadius: 4
+          width: 80,
+          height: 8,
+          backgroundColor: '#c8a96e',
+          marginBottom: 40,
+          borderRadius: 4
         }} />
 
         {/* Main Title */}
@@ -77,17 +77,17 @@ export default async function Image() {
 
         {/* Domain Label */}
         <div style={{
-            position: 'absolute',
-            bottom: 60,
-            fontSize: 24,
-            fontWeight: 700,
-            background: '#0d0d0c',
-            color: '#f5f4f0',
-            padding: '12px 24px',
-            borderRadius: 4,
-            letterSpacing: '0.1em'
+          position: 'absolute',
+          bottom: 60,
+          fontSize: 24,
+          fontWeight: 700,
+          background: '#0d0d0c',
+          color: '#f5f4f0',
+          padding: '12px 24px',
+          borderRadius: 4,
+          letterSpacing: '0.1em'
         }}>
-            ALTAREKA.COM
+          altareka.web.id
         </div>
       </div>
     ),

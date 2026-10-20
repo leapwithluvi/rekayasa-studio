@@ -217,44 +217,44 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-amber-warm" />
               Solusi Digital
             </h4>
-            <ul className="space-y-3.5 text-xs text-white/55">
+            <ul className="space-y-3.5 text-xs text-white/70">
               <li className="flex flex-col">
-                <span className="font-semibold text-white/80">
+                <span className="font-semibold text-white/90">
                   Landing Page Konversi Tinggi
                 </span>
-                <span className="text-[11px] text-white/40 mt-0.5">
+                <span className="text-[11px] text-white/70 mt-0.5">
                   Optimasi iklan Google &amp; Meta Ads
                 </span>
               </li>
               <li className="flex flex-col">
-                <span className="font-semibold text-white/80">
+                <span className="font-semibold text-white/90">
                   Website Korporat &amp; Profil Bisnis
                 </span>
-                <span className="text-[11px] text-white/40 mt-0.5">
+                <span className="text-[11px] text-white/70 mt-0.5">
                   Kredibilitas kelas enterprise
                 </span>
               </li>
               <li className="flex flex-col">
-                <span className="font-semibold text-white/80">
+                <span className="font-semibold text-white/90">
                   Web Application &amp; SaaS MVP
                 </span>
-                <span className="text-[11px] text-white/40 mt-0.5">
+                <span className="text-[11px] text-white/70 mt-0.5">
                   Fullstack Next.js &amp; performa tinggi
                 </span>
               </li>
               <li className="flex flex-col">
-                <span className="font-semibold text-white/80">
+                <span className="font-semibold text-white/90">
                   Website Toko &amp; E-Commerce
                 </span>
-                <span className="text-[11px] text-white/40 mt-0.5">
+                <span className="text-[11px] text-white/70 mt-0.5">
                   Checkout lancar &amp; integrasi WhatsApp
                 </span>
               </li>
               <li className="flex flex-col">
-                <span className="font-semibold text-white/80">
+                <span className="font-semibold text-white/90">
                   Optimasi Kecepatan &amp; SEO Teknis
                 </span>
-                <span className="text-[11px] text-white/40 mt-0.5">
+                <span className="text-[11px] text-white/70 mt-0.5">
                   Skor 95+ PageSpeed &amp; index Google
                 </span>
               </li>
@@ -309,13 +309,13 @@ export default function Footer() {
             </div>
 
             <div className="mt-8 pt-6 border-t border-white/[0.06]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 mb-1">
                 Basis &amp; Wilayah Layanan
               </p>
               <p className="text-xs text-white/80 font-medium leading-relaxed mb-1.5">
                 Tenggarong, Kutai Kartanegara, Kalimantan Timur
               </p>
-              <p className="text-[11px] text-white/45 leading-relaxed">
+              <p className="text-[11px] text-white/75 leading-relaxed">
                 Melayani: Tenggarong · Kukar · Samarinda · Balikpapan · IKN Nusantara · Seluruh Indonesia
               </p>
             </div>
@@ -350,7 +350,7 @@ export default function Footer() {
 
         {/* Bottom Legal & Utility Bar */}
         <div className="pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/40 text-center sm:text-left">
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/70 text-center sm:text-left">
             © 2026 ALTAREKA. All Rights Reserved.
           </p>
 

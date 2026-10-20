@@ -35,11 +35,6 @@ export default function Services() {
   const container = useRef(null);
 
   useGSAP(() => {
-    // Memastikan koordinat ScrollTrigger diperbarui setelah render awal
-    const timer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 50);
-
     // Animasi Header
     gsap.fromTo(".services-header", 
       { opacity: 0, y: 20 },
@@ -73,8 +68,6 @@ export default function Services() {
         }
       }
     );
-
-    return () => clearTimeout(timer);
   }, { scope: container });
 
   return (

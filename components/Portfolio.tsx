@@ -27,8 +27,6 @@ export default function Portfolio() {
 
   useGSAP(
     () => {
-      ScrollTrigger.refresh();
-
       gsap.fromTo(
         ".portfolio-header",
         { opacity: 0, y: 30 },
@@ -242,7 +240,7 @@ export default function Portfolio() {
 
                   {/* Key Highlights */}
                   <div className="space-y-2 mb-6">
-                    <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/30">
+                    <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/70">
                       Fitur & Solusi
                     </p>
                     {[
@@ -294,7 +292,7 @@ export default function Portfolio() {
               <div className="md:col-span-5 flex flex-col justify-between h-full space-y-6">
                 {/* Tech Stack */}
                 <div className="bg-[#fbfbf9] p-5 rounded-sm border border-charcoal/5">
-                  <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/40 mb-3">
+                  <p className="text-[9px] font-black uppercase tracking-[0.3em] text-charcoal/70 mb-3">
                     Tech Stack
                   </p>
                   <div className="flex flex-wrap gap-1.5">
@@ -326,7 +324,7 @@ export default function Portfolio() {
                   <p className="text-[10px] font-black uppercase tracking-wider text-charcoal">
                     — Manajemen PT. Bumi Kutai Perkasa
                   </p>
-                  <p className="text-[9px] text-charcoal/40">
+                  <p className="text-[9px] text-charcoal/70">
                     Kutai Kartanegara, Kaltim
                   </p>
                 </div>
@@ -357,7 +355,7 @@ export default function Portfolio() {
                 <span className="text-amber-warm italic">Berikutnya.</span>
               </h4>
 
-              <p className="text-xs text-off-white/70 leading-relaxed max-w-xl">
+              <p className="text-xs text-off-white/80 leading-relaxed max-w-xl">
                 Butuh website untuk <strong>Portofolio</strong>,{" "}
                 <strong>Katalog UMKM</strong>, atau{" "}
                 <strong>Company Profile PT</strong>? Dapatkan pendampingan
@@ -382,7 +380,7 @@ export default function Portfolio() {
 
               <a
                 href="#pricing"
-                className="py-3.5 px-5 bg-white/5 hover:bg-white/10 text-off-white/80 hover:text-off-white text-xs font-bold uppercase tracking-wider rounded-sm text-center transition-colors border border-white/5"
+                className="py-3.5 px-5 bg-white/5 hover:bg-white/10 text-off-white/90 hover:text-off-white text-xs font-bold uppercase tracking-wider rounded-sm text-center transition-colors border border-white/5"
               >
                 Lihat Harga →
               </a>

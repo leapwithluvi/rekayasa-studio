@@ -1,35 +1,21 @@
-# Altareka — Digital Atelier & Jasa Pembuatan Website
+# Altareka
 
-> Altareka (https://altareka.com) adalah studio arsitektur web independen yang berbasis di Tenggarong, Kutai Kartanegara, Kalimantan Timur. Mengkhususkan diri dalam pembuatan website Company Profile PT (standar tender), Katalog Digital UMKM modern, dan Portofolio Profesional berkinerja tinggi.
+> Studio arsitektur web independen dan jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara, Kalimantan Timur, dan seluruh Indonesia. Mengkhususkan diri pada Website Company Profile PT (standar tender), Katalog Digital UMKM, dan Portofolio Profesional berkinerja tinggi.
 
-## Profil & Identitas Bisnis
-- **Nama Usaha**: Altareka
-- **Situs Resmi**: https://altareka.com
-- **Basis Operasional**: Tenggarong, Kabupaten Kutai Kartanegara, Provinsi Kalimantan Timur, Indonesia
-- **Wilayah Layanan**: Tenggarong, Samarinda, Balikpapan, Bontang, Sangatta, Penajam Paser Utara, Ibu Kota Nusantara (IKN), seluruh Kalimantan Timur, dan nasional (seluruh Indonesia secara daring).
-- **Kontak WhatsApp**: +62 831-5224-8722 (0831-5224-8722)
-- **Founder & Lead Developer**: Luvi Aprilyansyah Gabriel
+Altareka menyediakan solusi web berstandar enterprise dengan Next.js, performa PageSpeed 95+, keamanan SSL, serta integrasi email resmi korporat dan tombol pemesanan WhatsApp otomatis.
 
-## Layanan Utama
-1. **Website Company Profile PT / Korporat**:
-   - Ditujukan untuk perusahaan yang membutuhkan legitimasi resmi, persyaratan tender proyek pemerintah/swasta, dan audit kredibilitas.
-   - Fitur: Keamanan SSL enterprise, email bisnis domain resmi (@namaperusahaan.co.id/.com), tata letak prestisius, responsif mobile, teroptimasi SEO teknis PageSpeed 95+.
-   - Paket: PT Starter (mulai Rp 1.500.000), PT Bisnis (mulai Rp 2.500.000), PT Premium (mulai Rp 3.500.000).
+## Layanan & Produk
+- [Company Profile PT](https://altareka.web.id/#services): Website resmi profil perusahaan berstandar audit tender, email domain korporat, dan keamanan terenkripsi.
+- [Katalog Digital UMKM](https://altareka.web.id/#services): Katalog produk modern untuk pelaku usaha lokal, kecepatan tinggi di ponsel, dan order langsung WhatsApp.
+- [Portofolio Profesional](https://altareka.web.id/#services): Website personal branding eksklusif untuk konsultan, arsitek, dokter, dan praktisi ahli.
+- [Daftar Paket & Investasi](https://altareka.web.id/#pricing): Rincian 9 paket harga transparan mulai dari Portofolio Kilat (Rp 250rb), Katalog UMKM (Rp 450rb), hingga PT Premium (Rp 3.5jt).
+- [Studi Kasus PT. Bumi Kutai Perkasa](https://www.bumikutaiperkasa.co.id): Portofolio live website supplier batu koral & split resmi di Kutai Kartanegara.
 
-2. **Website Katalog Digital UMKM**:
-   - Ditujukan untuk pelaku usaha lokal, kuliner (FnB), butik, bengkel, toko retail, dan penyedia jasa.
-   - Fitur: Tampilan menu/produk rapi, foto tajam dan cepat dimuat dari HP, tombol pemesanan langsung terhubung ke WhatsApp (*One-Click WhatsApp Order*), tanpa potongan komisi marketplace.
-   - Paket: Katalog Simpel (mulai Rp 450.000), Katalog Plus (mulai Rp 900.000), Bisnis Online (mulai Rp 1.600.000).
+## Wilayah Layanan
+- [Jasa Website Tenggarong & Kukar](https://altareka.web.id/#faq): Layanan konsultasi langsung dan pembuatan website di wilayah Tenggarong dan Kutai Kartanegara.
+- [Jasa Website Kalimantan Timur & IKN](https://altareka.web.id/#faq): Melayani Samarinda, Balikpapan, Bontang, Sangatta, Penajam Paser Utara, dan Ibu Kota Nusantara.
+- [Layanan Seluruh Indonesia](https://altareka.web.id/#home): Pengerjaan online cepat dan transparan untuk seluruh kota di Indonesia.
 
-3. **Website Portofolio Profesional**:
-   - Ditujukan untuk dokter, pengacara/lawyer, arsitek, konsultan independen, fotografer, dan tenaga ahli.
-   - Fitur: Desain editorial mewah, kurasi karya, kredensial, form janji temu konsultasi.
-   - Paket: Portofolio Kilat (mulai Rp 250.000), Portofolio Pro (mulai Rp 600.000), Portofolio Premium (mulai Rp 1.500.000).
-
-## Portofolio Unggulan
-- **PT. Bumi Kutai Perkasa** (https://www.bumikutaiperkasa.co.id): Website resmi perusahaan supplier batu koral & split berkualitas di Kutai Kartanegara & Kalimantan Timur.
-
-## Mengapa Memilih Altareka?
-- Bukan sekadar memasang template murahan — website dirancang dengan arsitektur modern (Next.js, Tailwind, TypeScript) dengan performa kilat.
-- Transparan: Tanpa biaya tersembunyi, hosting statis dan SSL gratis selamanya untuk paket landing page.
-- Pendampingan langsung oleh praktisi lokal yang mengerti lanskap bisnis Kalimantan Timur dan kebutuhan tender perusahaan.
+## Kontak & Verifikasi
+- [Konsultasi WhatsApp](https://wa.me/6283152248722): Kontak langsung tim pengembang Altareka (0831-5224-8722).
+- [Sitemap XML](https://altareka.web.id/sitemap.xml): Indeks peta situs resmi Altareka.

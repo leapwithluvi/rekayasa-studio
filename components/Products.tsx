@@ -42,7 +42,6 @@ export default function Products() {
 
   useGSAP(
     () => {
-      const timer = setTimeout(() => ScrollTrigger.refresh(), 50);
 
       gsap.fromTo(
         ".products-header",
@@ -93,8 +92,6 @@ export default function Products() {
           },
         }
       );
-
-      return () => clearTimeout(timer);
     },
     { scope: container }
   );
@@ -118,7 +115,7 @@ export default function Products() {
               untuk bisnis Anda.
             </h3>
           </div>
-          <p className="text-charcoal/50 text-sm leading-relaxed font-medium max-w-xs mx-auto md:mx-0 md:text-right">
+          <p className="text-charcoal/75 text-sm leading-relaxed font-medium max-w-xs mx-auto md:mx-0 md:text-right">
             Lebih dari sekadar jasa — kami sedang membangun ekosistem produk
             digital untuk UMKM Indonesia.
           </p>
@@ -138,7 +135,7 @@ export default function Products() {
               {/* Tag */}
               <span
                 className={`inline-block text-[10px] font-black uppercase tracking-[0.3em] mb-10 ${
-                  p.accent ? "text-amber-warm" : "text-charcoal/35"
+                  p.accent ? "text-amber-warm" : "text-charcoal/70"
                 }`}
               >
                 {p.tag}
@@ -147,7 +144,7 @@ export default function Products() {
               {/* Icon */}
               <div
                 className={`mb-8 transform group-hover:-rotate-12 transition-transform duration-500 ${
-                  p.accent ? "text-amber-warm" : "text-charcoal/20"
+                  p.accent ? "text-amber-warm" : "text-charcoal/40"
                 }`}
               >
                 <p.icon size={48} strokeWidth={1} />
@@ -174,7 +171,7 @@ export default function Products() {
               {/* Desc */}
               <p
                 className={`text-sm leading-relaxed font-medium ${
-                  p.accent ? "text-off-white/50" : "text-charcoal/50"
+                  p.accent ? "text-off-white/80" : "text-charcoal/75"
                 }`}
               >
                 {p.desc}
@@ -185,8 +182,8 @@ export default function Products() {
                 <span
                   className={`inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.25em] border px-4 py-2 rounded-full ${
                     p.accent
-                      ? "border-off-white/15 text-off-white/30"
-                      : "border-charcoal/12 text-charcoal/30"
+                      ? "border-off-white/30 text-off-white/80"
+                      : "border-charcoal/20 text-charcoal/70"
                   }`}
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-warm animate-pulse" />

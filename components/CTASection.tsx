@@ -56,7 +56,7 @@ export default function CTASection() {
           <h3 className="text-3xl sm:text-5xl md:text-8xl font-serif font-black tracking-tighter text-off-white leading-tight md:leading-none mb-10 md:16 italic text-balance px-4">
             Wujudkan Visi <br className="hidden sm:block" /> <span className="text-amber-warm not-italic">Digital</span> Anda.
           </h3>
-          <p className="text-lg md:text-2xl text-off-white/50 font-medium max-w-2xl mx-auto mb-10 md:16 leading-relaxed text-balance">
+          <p className="text-lg md:text-2xl text-off-white/80 font-medium max-w-2xl mx-auto mb-10 md:16 leading-relaxed text-balance">
             Hanya butuh satu klik untuk mengubah bisnis Anda menjadi standar global. Konsultasi pertama gratis.
           </p>
           
