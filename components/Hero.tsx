@@ -29,25 +29,22 @@ export default function Hero() {
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    // H1 remains visible immediately for instant LCP, only subtle motion
-    tl.from(".hero-title", {
-      y: 20,
-      duration: 0.6,
-    })
-    .from(".hero-description", {
-      y: 20,
-      opacity: 0.3,
-      duration: 0.6,
-    }, "-=0.3")
-    .from(".hero-cta", {
-      y: 15,
+    // H1 renders statically with zero delay for instantaneous LCP
+    tl.from(".hero-description", {
+      y: 16,
       opacity: 0.3,
       duration: 0.5,
-      stagger: 0.1,
-    }, "-=0.3")
+      delay: 0.1,
+    })
+    .from(".hero-cta", {
+      y: 12,
+      opacity: 0.3,
+      duration: 0.4,
+      stagger: 0.08,
+    }, "-=0.2")
     .from(".hero-social", {
       opacity: 0.4,
-      duration: 0.8,
+      duration: 0.6,
     }, "-=0.2");
   }, { scope: container });
 
@@ -92,12 +89,7 @@ export default function Hero() {
             <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none bg-gradient-to-r from-background to-transparent" />
             <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent" />
 
-            <div
-              className="flex items-center gap-8 md:gap-12 w-max"
-              style={{
-                animation: "marquee 26s linear infinite",
-              }}
-            >
+            <div className="flex items-center gap-8 md:gap-12 w-max animate-marquee">
               {marqueeItems.map((tech, i) => (
                 <div
                   key={i}
@@ -113,13 +105,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes marquee {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
     </section>
   );
 }

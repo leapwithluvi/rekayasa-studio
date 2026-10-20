@@ -42,4 +42,18 @@
     border-color: #09090b;
     background: rgba(0, 0, 0, 0.01);
   }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 26s linear infinite;
+    will-change: transform;
+  }
 }
