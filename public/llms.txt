@@ -5,17 +5,17 @@
 Altareka menyediakan solusi web berstandar enterprise dengan Next.js, performa PageSpeed 95+, keamanan SSL, serta integrasi email resmi korporat dan tombol pemesanan WhatsApp otomatis.
 
 ## Layanan & Produk
-- [Company Profile PT](https://altareka.web.id/#services): Website resmi profil perusahaan berstandar audit tender, email domain korporat, dan keamanan terenkripsi.
-- [Katalog Digital UMKM](https://altareka.web.id/#services): Katalog produk modern untuk pelaku usaha lokal, kecepatan tinggi di ponsel, dan order langsung WhatsApp.
-- [Portofolio Profesional](https://altareka.web.id/#services): Website personal branding eksklusif untuk konsultan, arsitek, dokter, dan praktisi ahli.
-- [Daftar Paket & Investasi](https://altareka.web.id/#pricing): Rincian 9 paket harga transparan mulai dari Portofolio Kilat (Rp 250rb), Katalog UMKM (Rp 450rb), hingga PT Premium (Rp 3.5jt).
+- [Company Profile PT](https://altareka.com/#services): Website resmi profil perusahaan berstandar audit tender, email domain korporat, dan keamanan terenkripsi.
+- [Katalog Digital UMKM](https://altareka.com/#services): Katalog produk modern untuk pelaku usaha lokal, kecepatan tinggi di ponsel, dan order langsung WhatsApp.
+- [Portofolio Profesional](https://altareka.com/#services): Website personal branding eksklusif untuk konsultan, arsitek, dokter, dan praktisi ahli.
+- [Daftar Paket & Investasi](https://altareka.com/#pricing): Rincian 9 paket harga transparan mulai dari Portofolio Kilat (Rp 250rb), Katalog UMKM (Rp 450rb), hingga PT Premium (Rp 3.5jt).
 - [Studi Kasus PT. Bumi Kutai Perkasa](https://www.bumikutaiperkasa.co.id): Portofolio live website supplier batu koral & split resmi di Kutai Kartanegara.
 
 ## Wilayah Layanan
-- [Jasa Website Tenggarong & Kukar](https://altareka.web.id/#faq): Layanan konsultasi langsung dan pembuatan website di wilayah Tenggarong dan Kutai Kartanegara.
-- [Jasa Website Kalimantan Timur & IKN](https://altareka.web.id/#faq): Melayani Samarinda, Balikpapan, Bontang, Sangatta, Penajam Paser Utara, dan Ibu Kota Nusantara.
-- [Layanan Seluruh Indonesia](https://altareka.web.id/#home): Pengerjaan online cepat dan transparan untuk seluruh kota di Indonesia.
+- [Jasa Website Tenggarong & Kukar](https://altareka.com/#faq): Layanan konsultasi langsung dan pembuatan website di wilayah Tenggarong dan Kutai Kartanegara.
+- [Jasa Website Kalimantan Timur & IKN](https://altareka.com/#faq): Melayani Samarinda, Balikpapan, Bontang, Sangatta, Penajam Paser Utara, dan Ibu Kota Nusantara.
+- [Layanan Seluruh Indonesia](https://altareka.com/#home): Pengerjaan online cepat dan transparan untuk seluruh kota di Indonesia.
 
 ## Kontak & Verifikasi
 - [Konsultasi WhatsApp](https://wa.me/6283152248722): Kontak langsung tim pengembang Altareka (0831-5224-8722).
-- [Sitemap XML](https://altareka.web.id/sitemap.xml): Indeks peta situs resmi Altareka.
+- [Sitemap XML](https://altareka.com/sitemap.xml): Indeks peta situs resmi Altareka.
