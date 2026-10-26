@@ -322,7 +322,7 @@ export default function Portfolio() {
                     dan mempercepat order batu split se-Kaltim.&rdquo;
                   </p>
                   <p className="text-[10px] font-black uppercase tracking-wider text-charcoal">
-                    — Manajemen PT. Bumi Kutai Perkasa
+                    — PT. Bumi Kutai Perkasa
                   </p>
                   <p className="text-[9px] text-charcoal/70">
                     Kutai Kartanegara, Kaltim
