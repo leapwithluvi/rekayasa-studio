@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import WhyMe from "@/components/WhyMe";
 import Portfolio from "@/components/Portfolio";
+import ServiceAreas from "@/components/ServiceAreas";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
@@ -23,6 +24,7 @@ export default function LandingPage() {
         <HowItWorks />
         <WhyMe />
         <Portfolio />
+        <ServiceAreas />
         <Testimonials />
         <Pricing />
         <FAQ />

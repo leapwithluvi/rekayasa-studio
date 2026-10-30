@@ -192,6 +192,7 @@ export default function Footer() {
                 { name: "Alur Proses Kerja", id: "#how-it-works" },
                 { name: "Portofolio Pilihan", id: "#portfolio" },
                 { name: "Paket & Investasi", id: "#pricing" },
+                { name: "Jangkauan Wilayah (Kaltim)", id: "#wilayah" },
                 { name: "Pertanyaan Umum (FAQ)", id: "#faq" },
                 { name: "Konsultasi Proyek", id: "#contact" },
               ].map((item) => (
@@ -310,13 +311,13 @@ export default function Footer() {
 
             <div className="mt-8 pt-6 border-t border-white/[0.06]">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 mb-1">
-                Basis &amp; Wilayah Layanan
+                Basis &amp; Jangkauan Wilayah
               </p>
-              <p className="text-xs text-white/80 font-medium leading-relaxed mb-1.5">
+              <p className="text-xs text-white/90 font-medium leading-relaxed mb-2">
                 Tenggarong, Kutai Kartanegara, Kalimantan Timur
               </p>
-              <p className="text-[11px] text-white/75 leading-relaxed">
-                Melayani: Tenggarong · Kukar · Samarinda · Balikpapan · IKN Nusantara · Seluruh Indonesia
+              <p className="text-[11px] text-white/70 leading-relaxed">
+                Melayani: Tenggarong &amp; Kukar · Samarinda · Balikpapan · Bontang · Sangatta (Kutim) · Penajam (PPU) · IKN Nusantara · Berau · Paser · Kutai Barat · Mahakam Ulu
               </p>
             </div>
           </div>

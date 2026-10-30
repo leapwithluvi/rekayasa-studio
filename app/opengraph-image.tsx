@@ -87,7 +87,7 @@ export default async function Image() {
           borderRadius: 4,
           letterSpacing: '0.1em'
         }}>
-          altareka.com
+          www.altareka.com
         </div>
       </div>
     ),

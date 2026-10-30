@@ -1,21 +1,25 @@
 # Altareka
 
-> Studio arsitektur web independen dan jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara, Kalimantan Timur, dan seluruh Indonesia. Mengkhususkan diri pada Website Company Profile PT (standar tender), Katalog Digital UMKM, dan Portofolio Profesional berkinerja tinggi.
+> Studio arsitektur web independen dan jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara, Samarinda, Balikpapan, dan seluruh Kalimantan Timur. Mengkhususkan diri pada Website Company Profile PT (standar tender), Katalog Digital UMKM, dan Portofolio Profesional berkinerja tinggi.
 
 Altareka menyediakan solusi web berstandar enterprise dengan Next.js, performa PageSpeed 95+, keamanan SSL, serta integrasi email resmi korporat dan tombol pemesanan WhatsApp otomatis.
 
 ## Layanan & Produk
-- [Company Profile PT](https://altareka.com/#services): Website resmi profil perusahaan berstandar audit tender, email domain korporat, dan keamanan terenkripsi.
-- [Katalog Digital UMKM](https://altareka.com/#services): Katalog produk modern untuk pelaku usaha lokal, kecepatan tinggi di ponsel, dan order langsung WhatsApp.
-- [Portofolio Profesional](https://altareka.com/#services): Website personal branding eksklusif untuk konsultan, arsitek, dokter, dan praktisi ahli.
-- [Daftar Paket & Investasi](https://altareka.com/#pricing): Rincian 9 paket harga transparan mulai dari Portofolio Kilat (Rp 250rb), Katalog UMKM (Rp 450rb), hingga PT Premium (Rp 3.5jt).
+- [Company Profile PT](https://www.altareka.com/#services): Website resmi profil perusahaan berstandar audit tender, email domain korporat, dan keamanan terenkripsi.
+- [Katalog Digital UMKM](https://www.altareka.com/#services): Katalog produk modern untuk pelaku usaha lokal, kecepatan tinggi di ponsel, dan order langsung WhatsApp.
+- [Portofolio Profesional](https://www.altareka.com/#services): Website personal branding eksklusif untuk konsultan, arsitek, dokter, dan praktisi ahli.
+- [Daftar Paket & Investasi](https://www.altareka.com/#pricing): Rincian 9 paket harga transparan mulai dari Portofolio Kilat (Rp 250rb), Katalog UMKM (Rp 450rb), hingga PT Premium (Rp 3.5jt).
 - [Studi Kasus PT. Bumi Kutai Perkasa](https://www.bumikutaiperkasa.co.id): Portofolio live website supplier batu koral & split resmi di Kutai Kartanegara.
 
-## Wilayah Layanan
-- [Jasa Website Tenggarong & Kukar](https://altareka.com/#faq): Layanan konsultasi langsung dan pembuatan website di wilayah Tenggarong dan Kutai Kartanegara.
-- [Jasa Website Kalimantan Timur & IKN](https://altareka.com/#faq): Melayani Samarinda, Balikpapan, Bontang, Sangatta, Penajam Paser Utara, dan Ibu Kota Nusantara.
-- [Layanan Seluruh Indonesia](https://altareka.com/#home): Pengerjaan online cepat dan transparan untuk seluruh kota di Indonesia.
+## Wilayah Layanan Spesialis Kalimantan Timur & Nasional
+- [Jasa Website Tenggarong & Kutai Kartanegara](https://www.altareka.com/#wilayah): Layanan konsultasi langsung dan pembuatan website di Tenggarong, Loa Kulu, Samboja, Muara Badak, dan seluruh Kukar.
+- [Jasa Pembuatan Website Samarinda](https://www.altareka.com/#wilayah): Pembuatan website bisnis, kontraktor, dan katalog toko di Kota Samarinda.
+- [Jasa Pembuatan Website Balikpapan](https://www.altareka.com/#wilayah): Website B2B migas, logistik pelabuhan, katering, dan perhotelan di Kota Balikpapan.
+- [Jasa Website Bontang, Sangatta & Kutai Timur](https://www.altareka.com/#wilayah): Solusi web industri, pertambangan, dan kelapa sawit di Bontang dan Sangatta.
+- [Jasa Website IKN Nusantara & Penajam Paser Utara](https://www.altareka.com/#wilayah): Profil resmi vendor konstruksi, supplier, dan penyedia jasa kawasan IKN Sepaku / PPU.
+- [Jasa Website Berau, Paser, Kutai Barat & Mahakam Ulu](https://www.altareka.com/#wilayah): Melayani seluruh 10 kabupaten/kota di Provinsi Kalimantan Timur.
+- [Layanan Seluruh Indonesia](https://www.altareka.com/#home): Pengerjaan online cepat, transparan, dan terpercaya untuk seluruh kota di Indonesia.
 
 ## Kontak & Verifikasi
 - [Konsultasi WhatsApp](https://wa.me/6283152248722): Kontak langsung tim pengembang Altareka (0831-5224-8722).
-- [Sitemap XML](https://altareka.com/sitemap.xml): Indeks peta situs resmi Altareka.
+- [Sitemap XML](https://www.altareka.com/sitemap.xml): Indeks peta situs resmi Altareka.

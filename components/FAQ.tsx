@@ -31,8 +31,12 @@ const faqs = [
     a: "Untuk paket yang menyertakan panel admin (Bisnis Online UMKM & PT Premium), Anda bisa mengelola produk, harga, dan artikel sendiri secara mandiri lengkap dengan panduan dan sesi pelatihan.",
   },
   {
+    q: "Apakah Altareka melayani pembuatan website di luar Tenggarong seperti Samarinda, Balikpapan, dan seluruh Kalimantan Timur?",
+    a: "Tentu saja. Altareka melayani pembuatan website untuk seluruh kabupaten dan kota di Kalimantan Timur: Tenggarong & Kutai Kartanegara (basis studio), Kota Samarinda, Kota Balikpapan, Kota Bontang, Kutai Timur (Sangatta), Penajam Paser Utara (PPU), Kawasan IKN Nusantara, Berau, Paser (Tanah Grogot), Kutai Barat (Sendawar), hingga Mahakam Ulu. Kami melayani konsultasi langsung tatap muka maupun online dengan pembaruan progres harian yang transparan.",
+  },
+  {
     q: "Bagaimana cara memulai pemesanan?",
-    a: "Cukup klik tombol 'Konsultasi Sekarang' atau chat langsung ke WhatsApp kami. Kami akan merespons cepat untuk mendiskusikan kebutuhan website Anda.",
+    a: "Cukup klik tombol 'Konsultasi Sekarang' atau chat langsung ke WhatsApp kami di 0831-5224-8722. Kami akan segera merespons untuk mendiskusikan kebutuhan website bisnis Anda.",
   },
 ];
 

@@ -12,6 +12,9 @@ export default function JsonLd() {
       "Altareka Digital",
       "Jasa Website Tenggarong Altareka",
       "Jasa Website Kukar Altareka",
+      "Jasa Website Samarinda Altareka",
+      "Jasa Website Balikpapan Altareka",
+      "Jasa Website IKN Altareka",
       "Jasa Pembuatan Website Kaltim"
     ],
     "image": `${SITE_URL}/opengraph-image`,
@@ -61,7 +64,7 @@ export default function JsonLd() {
         "name": "Altareka"
       }
     },
-    "description": "Jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara (Kukar), Samarinda, dan Kalimantan Timur. Spesialis Company Profile PT siap tender, Katalog UMKM modern, dan Portofolio profesional berkinerja tinggi.",
+    "description": "Jasa pembuatan website profesional di Tenggarong, Kutai Kartanegara (Kukar), Samarinda, Balikpapan, IKN, dan seluruh kabupaten/kota se-Kalimantan Timur. Spesialis Company Profile PT siap tender, Katalog UMKM modern, dan Portofolio profesional berkinerja tinggi.",
     "areaServed": [
       { "@type": "City", "name": "Tenggarong" },
       { "@type": "AdministrativeArea", "name": "Kutai Kartanegara" },
@@ -69,21 +72,29 @@ export default function JsonLd() {
       { "@type": "City", "name": "Balikpapan" },
       { "@type": "City", "name": "Bontang" },
       { "@type": "City", "name": "Sangatta" },
+      { "@type": "AdministrativeArea", "name": "Kutai Timur" },
       { "@type": "AdministrativeArea", "name": "Penajam Paser Utara" },
       { "@type": "AdministrativeArea", "name": "Nusantara (IKN)" },
+      { "@type": "AdministrativeArea", "name": "Berau" },
+      { "@type": "City", "name": "Tanjung Redeb" },
+      { "@type": "AdministrativeArea", "name": "Paser" },
+      { "@type": "City", "name": "Tanah Grogot" },
+      { "@type": "AdministrativeArea", "name": "Kutai Barat" },
+      { "@type": "City", "name": "Sendawar" },
+      { "@type": "AdministrativeArea", "name": "Mahakam Ulu" },
       { "@type": "AdministrativeArea", "name": "Kalimantan Timur" },
       { "@type": "Country", "name": "Indonesia" }
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Layanan Pembuatan Website Altareka",
+      "name": "Layanan Pembuatan Website Altareka Kalimantan Timur",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Jasa Website Company Profile PT (Tender-Ready & Verified)",
-            "description": "Pembuatan website profil perusahaan resmi berstandar korporat, siap audit tender, terintegrasi email domain resmi dan arsitektur keamanan modern."
+            "name": "Jasa Website Company Profile PT (Tender-Ready & Verified Kaltim)",
+            "description": "Pembuatan website profil perusahaan resmi berstandar korporat di Kalimantan Timur, siap audit tender, terintegrasi email domain resmi dan arsitektur keamanan modern."
           }
         },
         {
@@ -107,7 +118,39 @@ export default function JsonLd() {
           "itemOffered": {
             "@type": "Service",
             "name": "Jasa Website Tenggarong & Kutai Kartanegara",
-            "description": "Layanan konsultasi dan pembuatan website lokal di wilayah Tenggarong, Kukar, Samarinda, dan sekitarnya."
+            "description": "Layanan konsultasi langsung dan pembuatan website lokal di wilayah Tenggarong dan seluruh Kutai Kartanegara."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Jasa Pembuatan Website Samarinda",
+            "description": "Layanan perancangan website profesional untuk pelaku usaha, kontraktor, dan UMKM di Kota Samarinda."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Jasa Pembuatan Website Balikpapan",
+            "description": "Layanan website corporate B2B, logistik, migas, dan perhotelan di Kota Balikpapan."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Jasa Website IKN Nusantara & Penajam Paser Utara",
+            "description": "Pembuatan website untuk vendor konstruksi, supplier, dan pelaku usaha di sekitar Kawasan Inti Pusat Pemerintahan (KIPP) IKN dan Penajam."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Jasa Pembuatan Website Seluruh Kabupaten se-Kalimantan Timur",
+            "description": "Layanan digital profesional menjangkau Bontang, Sangatta (Kutim), Berau, Paser, Kutai Barat, hingga Mahakam Ulu."
           }
         }
       ]
@@ -171,6 +214,14 @@ export default function JsonLd() {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Untuk paket yang menyertakan panel admin (Bisnis Online UMKM & PT Premium), Anda bisa mengelola produk, harga, dan artikel sendiri secara mandiri lengkap dengan panduan dan sesi pelatihan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah Altareka melayani pembuatan website di luar Tenggarong seperti Samarinda, Balikpapan, dan seluruh Kalimantan Timur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tentu saja. Altareka melayani pembuatan website untuk seluruh kabupaten dan kota di Kalimantan Timur: Tenggarong & Kutai Kartanegara (basis studio), Kota Samarinda, Kota Balikpapan, Kota Bontang, Kutai Timur (Sangatta), Penajam Paser Utara (PPU), Kawasan IKN Nusantara, Berau, Paser (Tanah Grogot), Kutai Barat (Sendawar), hingga Mahakam Ulu. Kami melayani konsultasi tatap muka maupun online dengan pembaruan progres transparan setiap hari."
         }
       },
       {

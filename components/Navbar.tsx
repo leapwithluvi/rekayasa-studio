@@ -11,7 +11,7 @@ const navLinks = [
   { name: "Beranda", href: "#home" },
   { name: "Layanan", href: "#services" },
   { name: "Portofolio", href: "#portfolio" },
-  { name: "Keunggulan", href: "#why-me" },
+  { name: "Wilayah", href: "#wilayah" },
   { name: "Harga", href: "#pricing" },
   { name: "FAQ", href: "#faq" },
 ];
